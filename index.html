@@ -258,6 +258,347 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/11/0110-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/11/0110-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" itemprop="url">0110-05-邓彪（日报）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-11T00:27:45+08:00">
+                2020-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E6%8A%A5/" itemprop="url" rel="index">
+                    <span itemprop="name">日报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>更新日期：2020/1/10</p>
+<h2 id="上午："><a href="#上午：" class="headerlink" title="上午："></a>上午：</h2><blockquote>
+<p>首先今天轮到我演讲，我讲了一下def con ctf的起源，讲的一般般吧O(∩_∩)O，希望以后做的更好<br>今天先安装了一个Nessus+AWVS的虚拟机，可以通过该虚拟机直接使用工具Nessus和Acuntix</p>
+</blockquote>
+<blockquote>
+<p>Nessus</p>
+<blockquote>
+<p>可以选择很多扫描方式，然后添加IP和插件后直接扫描</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Acuntix：<br>流程和Nessus是差不多的，不过可以选择所有的扫描类型并且不用选择插件</p>
+<blockquote>
+<p>scan type:在Full Scan和scanning profile中选择一个扫描类型。不同的扫描类型对于漏洞的扫描侧重点是不一样的（例如选择Cross-Site Scripting，SQL Injection）。下面简略的介绍了有关Acunetix中所包含的扫描类型。<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1RNJ9v0PPu6jTwY9QbSOkhHJuwGdksWR*cf1WXAwfOx2.AiGTvUkZmTU4qNuHMj8aAcPXBWI1hiwgbGh5YNaC9U!/b&bo=MgXiAQAAAAADB*Y!&rf=viewer_4" alt></p>
+<blockquote>
+<p>Full Scan– 使用Full Scan来发起一个扫描的话，Acunetix会检查所有可能得安全漏洞。<br>High Rish Vulnerabilities–这个扫描选项将仅仅只会检查那些对web站点影响最大的缺陷漏洞<br>Cross-Site Scripting（XSS）–XXS漏洞扫描只会检测跨站脚本攻击漏洞缺陷。<br>SQL Injection–SQL Injection扫面只会检查有关SQL注入的漏洞攻击。<br>Weak Passwords–弱密码漏洞扫描将只会扫描那些接受用户名和密码的表单，并尝试对这些表单进行攻击。<br>Crawl Only–爬虫扫描仅仅对网站进行爬虫并建立该网站的整体结构，并不会做任何漏洞扫描检查。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>介绍了悬剑武器和goby(用于web扫描)</p>
+</blockquote>
+<h2 id="下午："><a href="#下午：" class="headerlink" title="下午："></a>下午：</h2><blockquote>
+<p>用Nessus和Acunetix扫描网站，发现Acunetix工具出现无法解析的错误<br>用Nessus扫描ppdai出现了漏洞报告有3条信息<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1ZN4WIVSs5KIL1ulZ8LnzFuCpwtZFIbDsmYo0pEPgO8.ssezcnzG*LO0aEf9oJjJ4XhlTU2DN8Ikqjqc*JoNp7Y!/b&bo=cQXmAQAAAAADB7E!&rf=viewer_4" alt><br>然后开始安装Metasploitable2（可以作为一个集合了众多漏洞的靶机）虚拟机和openvas（扫描工具），趁安装的功夫将博客网站的分类弄好了，看上去舒服多了。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/10/0110-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/10/0110-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89%20/" itemprop="url">0110-05-邓彪-作业</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-10T09:54:10+08:00">
+                2020-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
+                    <span itemprop="name">作业</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>更新日期：2020/01/10</p>
+<h2 id="Metasploitable-2"><a href="#Metasploitable-2" class="headerlink" title="Metasploitable 2"></a>Metasploitable 2</h2><blockquote>
+<p>作用是用来作为MSF攻击用的靶机,他是一个具有无数未打补丁漏洞与开放了无数高危端口的渗透演练系统,Metasploitable已经提前安装了Web漏洞演练系统，当打开Metasploitable并接入网络后，Web服务器就会自动开启。<br>Metasploitable上配置的Web漏洞演练系统有以下几个</p>
+<blockquote>
+<p>mutillidae (NOWASP Mutillidae 2.1.19)<br>dvwa (Damn Vulnerable Web Application)<br>tikiwiki (TWiki)<br>dav (WebDav)</p>
+</blockquote>
+</blockquote>
+<h2 id="利用Nessus将Metasploitable2作为靶机进行扫描"><a href="#利用Nessus将Metasploitable2作为靶机进行扫描" class="headerlink" title="利用Nessus将Metasploitable2作为靶机进行扫描"></a>利用Nessus将Metasploitable2作为靶机进行扫描</h2><blockquote>
+<p>用VM打开Metasploitable2，查看靶机的IP地址<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1YU6nuETuaDzwws3wYUDy2MAyeAYbN.nJt8e*bMV6LSOvPYwhLmVbRXzcnOyAn5P9mRlY8SI2bQ37c4HRLdJSe8!/b&bo=0ALgAQAAAAADBxE!&rf=viewer_4" alt><br>用浏览器输入Metasploitable2的IP地址，验证是否打开了Web服务(可以打击演练系统进行漏洞练习)<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dJbwb.HtEMo5uDoa1MNX9l1s3TK2b*0Hwfnyi66le0im8UcJztJbBb7cRn3R6sGhMCGtyyQUJ65aTziETcgTj0!/b&bo=bQIbAgAAAAADB1Q!&rf=viewer_4" alt><br>打开Nessus，添加扫描方式<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1QEqTcUu8R8*yHJTnOzsDgMkBPA8sKf9z0RD*yXyXlv8lfrxfClrEs97ELZPLgND2lrNPwHwJl1ixx2AXlyedSw!/b&bo=dgXwAgAAAAADB6M!&rf=viewer_4" alt><br>输入Metasploitable2的IP地址,并且启动扫描插件<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1brkolZdXE2Va540EzTsZGTWbEd*k.a8n7euFp27vpHUDgzt.Iqv1AdiVVhlmVuxdM7ZQ65cHAuZ7oh0Nb2FaG0!/b&bo=lgQiAgAAAAADB5A!&rf=viewer_4" alt><br>开始扫描，得到结果<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1eSV1pcUXt6TLB6aEeVd1s7RcvEHGPDpBCV*z2At77uQja2dtl9SQVNuBc1*BsKQK*I2orwsmkdUbFIGo55DYpY!/b&bo=gAdKAwAAAAADB.w!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="AWVS安装"><a href="#AWVS安装" class="headerlink" title="AWVS安装"></a>AWVS安装</h2><blockquote>
+<p>打开windows版本的AWVS,打开acunetix_12.0.190902105.exe<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1aIIs1sNQDmWWyVXsrJGyNQktwGCf7yL3ae9xyFVQzTgduzmCxKfwUv1.hZmKfnQmTQnAEX*hjqiP2F8lZDGBcU!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br>按顺序安装，邮箱，密码，接口好像都是可以自己随便设置的<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1XheYtPOyDBW5w9Bs4Db9VXba4BFw8eF61jZjuksJFjCGhq*T4jh14.1pYfQp8bTt8Qyw*zERKLxAps3l1sy3Qk!/b&bo=SgLeAQAAAAADB7U!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1RqlxEettxEKLO5aJrUDM*UZsISzu8jAxx6d98B74tKfjuAoUXDDD01MdF.8iYIIuiyrp0p8vvi9x.NJtNnNi0Q!/b&bo=SgLeAQAAAAADB7U!&rf=viewer_4" alt><br>安装完成后把patch.dat patch.exe 复制到安装目录下<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1buymByy7*xaPMdrV5znCXYRaTbWqWhxRcOkQwoFhkyNPLfL7cc7fgcx3*yvIrINdZUJntUFgNiLSHXIJfteznY!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1fkUDUd4SrYu3DU6DwJOnUS03S9eL3rN2z9iUm5rXgdLYSxW7rBS0iP4CjmnOP9jS58r13HLSIcA*xi*.twaP5c!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br>打开patch.exe,会出现一个黑框里面让你输入License Key和其他的一些设置，我全部设置成了一样的52pojie，也就是说这里应该也是可以随便填的，然后就完事了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1T25Yg4KWRHBI3AAyWRyCkBSx0ZA9pSeg5oC2QMEg9.20gPwtmvvGlBFDBkGl78T*YxazOMhj1mD5gDiBes6xwE!/b&bo=1wSHAgAAAAADB3Q!&rf=viewer_4" alt><br>重新打开软件Acunetix，会跳出一个浏览器界面，输入前面自己设置的邮箱和密码就进去了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1UNBAHKGOA56.3cJIW8HJ.7q7KXALe9cjU6nvqweWu6yk*.IpFX.r8WRdzl6FqL0yReX5Pf*LRBexiG5vSI32.k!/b&bo=wQVlAwAAAAADB4A!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="利用AWVS将Metasploitable2作为靶机进行扫描"><a href="#利用AWVS将Metasploitable2作为靶机进行扫描" class="headerlink" title="利用AWVS将Metasploitable2作为靶机进行扫描"></a>利用AWVS将Metasploitable2作为靶机进行扫描</h2><blockquote>
+<p>打开AWVS，添加目标，输入Metasploitable2的地址<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1fgseYPiXHVC2nLiOQxr.Qo1f*fQkbE6W54cLwhy.VDY3SODBSZVpbv6hHNES8dJWhO06V0BdQHIDtlwffluO28!/b&bo=CAWuAQAAAAADF5A!&rf=viewer_4" alt><br>选择保存后点击扫描将对目标进行扫描<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1Sz0zGnzggHjaNuYvXUgReHSFSpZpoPln7P*XsgHkasxD6AznF7uBxmL.niWGDrzpRvZAy*4otKjTzPExnDRgOI!/b&bo=cwNHAgAAAAARBwU!&rf=viewer_4" alt><br>得到扫描结果<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dKVZ9kIyEzQ3W8dNIZl6JzX40vjoYAA8LFiGNdqUOhCQUB7IfT77UTIeuDSJiKJI*vawFEGoOKdRQkRY*LyEJc!/b&bo=1gU3AwAAAAADB8U!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="openvas的安装非常不顺利，截至此时仍然没有安装成功"><a href="#openvas的安装非常不顺利，截至此时仍然没有安装成功" class="headerlink" title="openvas的安装非常不顺利，截至此时仍然没有安装成功"></a>openvas的安装非常不顺利，截至此时仍然没有安装成功</h2><blockquote>
+<p>顺便用kali扫描了一下Metasploitable2的端口开放情况<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SpErMzywxDlowJLRROUr1aBVV2GkNhUCxMoCoi8bb04YkWHTiFglE0F8b8KL6q354TsrA*JjZVXTu9JlgjiXUw!/b&bo=jwLTAQAAAAADB30!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>AWVS</p>
+<blockquote>
+<p>AWVS扫描了很久的时候还没有完成扫描过程，可见AWVS的扫描效率可能不那么高<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dIAJ34eJOEfMM*saQ*LgUiUJssTxZoc4En9INfrWOMyjfBLOOxvYNirLysehDYxMvsWt90bFv5xILyECeG5q7E!/b&bo=3wXHAQAAAAADBz4!&rf=viewer_4" alt><br>AWVS给出的漏洞细节比较清晰，给出具体的攻击细节和文件<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1RPpptLghaBT8j7WFi9XFnS6QhUeRjo*3bqXibygEWxy1UQWXUWvxfNS2Rks1vk2L3bNeyw96QsQEPnJ3Qb5qr0!/b&bo=ZQZaAgAAAAADBxk!&rf=viewer_4" alt><br>AWVS可以给出扫描的网站结构<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SErk8FonMTMr0lNLYeUoyl1eslPiQvF9wUPM8oN5oRVdMGeHkWu73468G1S3HpA.7B5SPeochDvlazqvY5ysg4!/anull&bo=gAdKAwAAAAADB.w!&rf=photolist&t=5" alt><br>AWVS给出的漏洞数量比Nessus多一些,效果比较好<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SnEPRq*W4XezDqY43Dk8.5VVy32TH5MzF5qri4VJ6tGtxVM1V42T2oLlZ*dLfkz0Htr7J3YvXQtCLcqLJw5juE!/b&bo=EQMhAQAAAAADBxA!&rf=viewer_4" alt><br>从整体看AWVS是一款非常强大的漏扫工具，希望以后能够更好的利用它</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Nessus</p>
+<blockquote>
+<p>它的漏洞展示分类更加详细，比较明了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1bM4LVKjkQoCyBfAZl9Xt2k*YJbHqFMdeWOtatpaZ44xRHtYy0IoXGD1aSKiv.10BBL0e6aVrTyNaCmlQjoQrag!/b&bo=HQavAgAAAAADB5Q!&rf=viewer_4" alt><br>有非常多的扫描方式和插件，可以自定义更有针对性的进行扫描<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1UwY0lmy6jV76*92LrpO0mvA5E04NN9ZFjGD*pa3JnwLcDj3zL4NwCwqOlq3dW0WNOevOgNNyJxVhyGzdqXcThA!/b&bo=aAXhAgAAAAADB6w!&rf=viewer_4" alt><br>扫描速度比较快，效率很高<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1T6LpK9fcjpQh7r9rkX8*BxEUTD*a.Mb2ru4Usy75pmAS5GidUN9gztdeaBktjK9971D.aSABZXNGMHNiW31yxQ!/b&bo=DAZAAgAAAAADB2o!&rf=viewer_4" alt><br>Neeeus会给出漏洞描述，更好的去了解漏洞是如何产生和利用的<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1TkVVPm9wUytYNNdPRgqWvtmT.XGFoJ75TGRQDJWEiOLIWNPxR1hiGcp3j3pkE9j7JR8NYtF6IafyflF*Qn1hnw!/b&bo=ZANrAgAAAAADByw!&rf=viewer_4" alt><br>Nessus和AWVS两款工具都是我们以后需要经常使用到的，所以应该去尽可能的熟练使用，挖出更多的漏洞。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>关于利用这些漏洞去渗透,从网上看了一些方法，都是比较复杂的，对于现阶段的我来说还是比较困难的，所以再多学习一段时间再去试试能不能将这些漏洞利用起来进行渗透操作。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/09/0109-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -863,7 +1204,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/01/08/0108-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E4%B8%8E%E5%BC%B1%E5%8F%A3%E4%BB%A4%EF%BC%89/" itemprop="url">01008-05-邓彪（作业-信息收集与弱口令）</a></h1>
+                <a class="post-title-link" href="/2020/01/08/0108-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A-%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E4%B8%8E%E5%BC%B1%E5%8F%A3%E4%BB%A4%EF%BC%89/" itemprop="url">0108-05-邓彪（作业-信息收集与弱口令）</a></h1>
         
 
         <div class="post-meta">
@@ -1413,7 +1754,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1435,7 +1776,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
