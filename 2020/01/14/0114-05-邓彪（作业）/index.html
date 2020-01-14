@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="渗透常用工具," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="更新日期：2020&#x2F;01&#x2F;14   输入url到页面加载完成的过程中发生了什么  1、浏览器的地址栏输入URL并按下回车。2、浏览器查找当前URL是否存在缓存，并比较缓存是否过期。3、DNS解析URL对应的IP。4、根据IP建立TCP连接（三次握手）。5、HTTP发起请求。6、服务器处理请求，浏览器接收HTTP响应。7、渲染页面，构建DOM树。8、关闭TCP连接（四次挥手）。   渗透测试常用工">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0114-05-邓彪（作业）">
+<meta property="og:url" content="http://yoursite.com/2020/01/14/0114-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/index.html">
+<meta property="og:site_name" content="yibai的空间">
+<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;14   输入url到页面加载完成的过程中发生了什么  1、浏览器的地址栏输入URL并按下回车。2、浏览器查找当前URL是否存在缓存，并比较缓存是否过期。3、DNS解析URL对应的IP。4、根据IP建立TCP连接（三次握手）。5、HTTP发起请求。6、服务器处理请求，浏览器接收HTTP响应。7、渲染页面，构建DOM树。8、关闭TCP连接（四次挥手）。   渗透测试常用工">
+<meta property="article:published_time" content="2020-01-14T11:30:08.634Z">
+<meta property="article:modified_time" content="2020-01-14T13:56:04.264Z">
+<meta property="article:author" content="yibai">
+<meta property="article:tag" content="渗透常用工具">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/14/0114-05-邓彪（作业）/"/>
+
+
+
+
+
+  <title>0114-05-邓彪（作业） | yibai的空间</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">yibai的空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/14/0114-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">0114-05-邓彪（作业）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-14T19:30:08+08:00">
+                2020-01-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
+                    <span itemprop="name">作业</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>更新日期：2020/01/14</p>
+</blockquote>
+<blockquote>
+<p>输入url到页面加载完成的过程中发生了什么</p>
+<blockquote>
+<p>1、浏览器的地址栏输入URL并按下回车。<br>2、浏览器查找当前URL是否存在缓存，并比较缓存是否过期。<br>3、DNS解析URL对应的IP。<br>4、根据IP建立TCP连接（三次握手）。<br>5、HTTP发起请求。<br>6、服务器处理请求，浏览器接收HTTP响应。<br>7、渲染页面，构建DOM树。<br>8、关闭TCP连接（四次挥手）。</p>
+</blockquote>
+</blockquote>
+<h2 id="渗透测试常用工具"><a href="#渗透测试常用工具" class="headerlink" title="渗透测试常用工具"></a>渗透测试常用工具</h2><blockquote>
+<p>信息收集</p>
+<blockquote>
+<p>Whois查询工具</p>
+<blockquote>
+<p><a href="https://who.is/" target="_blank" rel="noopener">who.is:</a><a href="https://who.is" target="_blank" rel="noopener">https://who.is</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://whois.aizhan.com/" target="_blank" rel="noopener">爱站:</a><a href="https://whois.aizhan.com" target="_blank" rel="noopener">https://whois.aizhan.com</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步:</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://whois.chinaz.com/" target="_blank" rel="noopener">站长工具:</a><a href="http://whois.chinaz.com" target="_blank" rel="noopener">http://whois.chinaz.com</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>子域名收集</p>
+<blockquote>
+<p>1.GoogleHacking</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>2.网络空间安全搜索引擎</p>
+<blockquote>
+<p><a href="https://www.zoomeye.org/" target="_blank" rel="noopener">zoomeye(钟馗之眼):</a><a href="https://www.zoomeye.org" target="_blank" rel="noopener">https://www.zoomeye.org</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://www.shodan.io/" target="_blank" rel="noopener">shodan:</a><a href="https://www.shodan.io" target="_blank" rel="noopener">https://www.shodan.io</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://fofa.so/" target="_blank" rel="noopener">Fofa:</a><a href="https://fofa.so" target="_blank" rel="noopener">https://fofa.so</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://www.censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://www.censys.io" target="_blank" rel="noopener">https://www.censys.io</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://www.dnsdb.io/" target="_blank" rel="noopener">Dnsdb搜索引擎：</a><a href="https://www.dnsdb.io" target="_blank" rel="noopener">https://www.dnsdb.io</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>3.在线查询接口</p>
+<blockquote>
+<p><a href="https://www.virustotal.com/" target="_blank" rel="noopener">VirusTotal:</a><a href="https://www.virustotal.com" target="_blank" rel="noopener">https://www.virustotal.com</a> (还可以对文件进行安全性测试)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://censys.io" target="_blank" rel="noopener">https://censys.io</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://tool.chinaz.com/subdomain/" target="_blank" rel="noopener">站长之家:</a><a href="http://tool.chinaz.com/subdomain" target="_blank" rel="noopener">http://tool.chinaz.com/subdomain</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://searchdns.netcraft.com/" target="_blank" rel="noopener">Netcraft:</a><a href="http://searchdns.netcraft.com" target="_blank" rel="noopener">http://searchdns.netcraft.com</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步在线:</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>4.爆破工具</p>
+<blockquote>
+<p>Layer子域名挖掘机</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>subDomainsBrute(github下载)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>5.DNS查询</p>
+<blockquote>
+<p><a href="https://www.dnsdb.io/zh-cn/" target="_blank" rel="noopener">Dnsdb:</a><a href="https://www.dnsdb.io/zh-cn" target="_blank" rel="noopener">https://www.dnsdb.io/zh-cn</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>6.HTTPS证书</p>
+<blockquote>
+<p><a href="https://crt.sh/?Identity=%%.github.com/" target="_blank" rel="noopener">Crt.sh:</a><a href="https://crt.sh/?Identity=%%.github.com" target="_blank" rel="noopener">https://crt.sh/?Identity=%%.github.com</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://censys.io" target="_blank" rel="noopener">https://censys.io</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://certdb.com/domain/github.com/" target="_blank" rel="noopener">Spyse:</a><a href="https://certdb.com/domain/github.com" target="_blank" rel="noopener">https://certdb.com/domain/github.com</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>相关域名收集</p>
+<blockquote>
+<p><a href="http://www.webscan.cc/" target="_blank" rel="noopener">Webscan:</a><a href="http://www.webscan.cc" target="_blank" rel="noopener">http://www.webscan.cc</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://phpinfo.me/bing.php/" target="_blank" rel="noopener">Phpinfo:</a><a href="https://phpinfo.me/bing.php" target="_blank" rel="noopener">https://phpinfo.me/bing.php</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>真实IP收集判断</p>
+<blockquote>
+<p>查询历史DNS记录</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://dnsdb.io/zh-cn/" target="_blank" rel="noopener">Dnsdb:</a><a href="https://dnsdb.io/zh-cn" target="_blank" rel="noopener">https://dnsdb.io/zh-cn</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步在线：</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://toolbar.netcraft.com/site_report?url=/" target="_blank" rel="noopener">Netcraft:</a><a href="http://toolbar.netcraft.com/site_report?url=" target="_blank" rel="noopener">http://toolbar.netcraft.com/site_report?url=</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://viewdns.info/" target="_blank" rel="noopener">View:</a><a href="http://viewdns.info" target="_blank" rel="noopener">http://viewdns.info</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>多地ping域名法</p>
+<blockquote>
+<p><a href="http://itools.com/tool/just-ping/" target="_blank" rel="noopener">just ping:</a><a href="http://itools.com/tool/just-ping" target="_blank" rel="noopener">http://itools.com/tool/just-ping</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>端口扫描</p>
+<blockquote>
+<p>RouterScan(将IP段范围输入再点击开始即可，也可以自己制定相应的端口，可以去文件下的port.txt文件添加)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Nmap(有图形界面和命令行两种方式，官网可下载)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>御剑端口扫描</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>指纹识别</p>
+<blockquote>
+<p><a href="http://www.yunsee.cn/finger.html/" target="_blank" rel="noopener">云悉:</a><a href="http://www.yunsee.cn/finger.html" target="_blank" rel="noopener">http://www.yunsee.cn/finger.html</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="http://whatweb.bugscaner.com/look/" target="_blank" rel="noopener">BugScaner:</a><a href="http://whatweb.bugscaner.com/look" target="_blank" rel="noopener">http://whatweb.bugscaner.com/look</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><a href="https://whatweb.net/" target="_blank" rel="noopener">WhatWeb:</a><a href="https://whatweb.net/" target="_blank" rel="noopener">https://whatweb.net/</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>敏感文件</p>
+<blockquote>
+<p>githack(github可下载)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>后台目录</p>
+<blockquote>
+<p>御剑后台扫描</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>dirsearch(github下载)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>抓改包</p>
+<blockquote>
+<p>Fiddler</p>
+<blockquote>
+<p>下载地址：<a href="https://pan.baidu.com/s/1cpKNmuI-1NsL0etHwlf_Tg" target="_blank" rel="noopener">https://pan.baidu.com/s/1cpKNmuI-1NsL0etHwlf_Tg</a> 提取码: w98b</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>使用教程：<a href="http://www.360doc.com/content/18/0924/14/35242528_789282727.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/18/0924/14/35242528_789282727.shtml</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Burpsuite</p>
+<blockquote>
+<p>下载地址：<a href="https://down.52pojie.cn/Tools/Network_Analyzer/Burp_Suite_Pro_v2.1.07_Loader_Keygen.zip" target="_blank" rel="noopener">https://down.52pojie.cn/Tools/Network_Analyzer/Burp_Suite_Pro_v2.1.07_Loader_Keygen.zip</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>使用教程：<a href="https://t0data.gitbooks.io/burpsuite/content/" target="_blank" rel="noopener">https://t0data.gitbooks.io/burpsuite/content/</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>webshell</p>
+<blockquote>
+<p>中国菜刀(图形化界面直接操作)</p>
+<blockquote>
+<p>下载地址：<a href="http://www.maicaidao.co/" target="_blank" rel="noopener">http://www.maicaidao.co/</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>中国蚁剑</p>
+<blockquote>
+<p>下载地址：<a href="https://github.com/AntSwordProject/AntSword-Loader" target="_blank" rel="noopener">https://github.com/AntSwordProject/AntSword-Loader</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>使用教程：<a href="https://doc.u0u.us/zh-hans/terminal/main_page.html" target="_blank" rel="noopener">https://doc.u0u.us/zh-hans/terminal/main_page.html</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>冰蝎(图形化操作)</p>
+<blockquote>
+<p>下载地址：<a href="https://github.com/rebeyond/Behinder/releases" target="_blank" rel="noopener">https://github.com/rebeyond/Behinder/releases</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>weevely(kali自带)</p>
+<blockquote>
+<p>weevely 是 Linux 系统自带的菜刀，使用python编写的webshell工具，集webshell生成和连接于一身，采用c/s模式构建，可以算作一款 php菜刀 替代工具，具有很好的隐蔽性。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>注入</p>
+<blockquote>
+<p>sqlmap</p>
+<blockquote>
+<p>下载地址：<a href="https://github.com/sqlmapproject/sqlmap" target="_blank" rel="noopener">https://github.com/sqlmapproject/sqlmap</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>编解码</p>
+<blockquote>
+<p>在线网站<a href="http://tool.chinaz.com/Tools/textencrypt.aspx" target="_blank" rel="noopener">http://tool.chinaz.com/Tools/textencrypt.aspx</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>burpsuite的Decoder模块</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>代理</p>
+<blockquote>
+<p>Proxy King</p>
+<blockquote>
+<p>Proxy King 是一款支持指定进程代理的软件,可以帮助用户隐藏本机上网ip.无需用户自备代理,软件有云端内置几千个可用的Socks5代理</p>
+<blockquote>
+<p>下载地址：<a href="http://proxyking.oss.aliyuncs.com/Proxy_King.zip" target="_blank" rel="noopener">http://proxyking.oss.aliyuncs.com/Proxy_King.zip</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>扫描</p>
+<blockquote>
+<p>AWVS</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Nessus</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>openvas</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Netsparker</p>
+<blockquote>
+<p>Netsparker是一款综合型的web应用安全漏洞扫描工具，它分为专业版和免费版，免费版的功能也比较强大。Netsparker与其他综合 性的web应用安全扫描工具相比的一个特点是它能够更好的检测SQL Injection和 Cross-site Scripting类型的安全漏洞。</p>
+<blockquote>
+<p>下载地址：<a href="http://www.netsparker.com" target="_blank" rel="noopener">www.netsparker.com</a> </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>使用教程：<a href="https://blog.csdn.net/u012206617/article/details/90043090" target="_blank" rel="noopener">https://blog.csdn.net/u012206617/article/details/90043090</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>漏洞利用</p>
+<blockquote>
+<p>Struts2终极漏洞利用工具（图形化界面）</p>
+<blockquote>
+<p>下载地址：<a href="http://pan.baidu.com/s/1cpcQeE" target="_blank" rel="noopener">http://pan.baidu.com/s/1cpcQeE</a><br>使用教程：<a href="https://blog.csdn.net/weixin_30446613/article/details/97823391" target="_blank" rel="noopener">https://blog.csdn.net/weixin_30446613/article/details/97823391</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Seay-svn源码泄露漏洞利用工具</p>
+<blockquote>
+<p>下载地址：<a href="http://pan.baidu.com/s/1mrNpB" target="_blank" rel="noopener">http://pan.baidu.com/s/1mrNpB</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%B8%97%E9%80%8F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag"># 渗透常用工具</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/14/0114-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" rel="next" title="0114-05-邓彪（日报）">
+                <i class="fa fa-chevron-left"></i> 0114-05-邓彪（日报）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yibai</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#渗透测试常用工具"><span class="nav-number">1.</span> <span class="nav-text">渗透测试常用工具</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yibai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
