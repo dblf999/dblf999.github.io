@@ -258,6 +258,656 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/" itemprop="url">0115-05-邓彪（日报）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-15T21:52:36+08:00">
+                2020-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E6%8A%A5/" itemprop="url" rel="index">
+                    <span itemprop="name">日报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>更新日期：2020/01/15</p>
+</blockquote>
+<h2 id="Bandit-wargame"><a href="#Bandit-wargame" class="headerlink" title="Bandit wargame"></a>Bandit wargame</h2><blockquote>
+<p>0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0<br>命令为：ssh <a href="mailto:bandit0@bandit.labs.overthewire.org">bandit0@bandit.labs.overthewire.org</a> -p 2220<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>0-1.下一关的密码藏在readme文件中，直接使用cat命令查看<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1XcT17DSEAiVJ4q8*YCM7lE9rWmD1K7gQPC0inAbTuQHUCFeja5YJ6FfkERCtc2o*FNscGQn58lOtK5JxsBet6Q!/b&bo=xgN3AQAAAAADF4E!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>1-2.利用0-1得到的密码连接到本关的主机，发现第三关的密码藏在“-”中，“-”在linux中是有特殊意义的，如果直接使用cat查看的话无法读取，所以使用“./-”来表明是作为路径查看的。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1eCHmATsfx73teJ*Huio4YG6arfvwdUdlmvnvCBCNVyGVicy33wsftVnvmv3vox75zE0Z8hf7lK56ZVCvxqx5ng!/b&bo=mAG0AAAAAAADFx8!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>2-3.利用1-2得到的密码连接到本关的主机，发现下一级别的密码存储在主目录中此文件名中称为空格的文件中，这道题文件名中有空格，可以用双引号把文件名包裹起来<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ShkKhjfFZ3KEYWrRo6cWactBUUAI2JrhsdVCu6NXSTaV8Nq3*6z*KLl65x5R*UQlvD5mVEQKvxOOWi31cTizcs!/b&bo=6AFwAAAAAAADF6s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>3-4.利用2-3得到的密码连接到本关的主机,下一级别的密码存储在inhere目录中的隐藏文件中,在linux中，文件名前面有.的就是隐藏文件，可以使用ls -a来显示<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YOlGFUcfnibMt94tgRk9iVtVhucJI89Go*Nu6mlZzld*.kmDtjFs.AU81.AjNt1TTQNtc0d9pdD15FpgGmZKNg!/b&bo=iQG2AAAAAAADFww!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>4-5.利用3-4得到的密码连接到本关的主机,下一关的密码保存在inhere文件夹下唯一可读的文件中,使用 file 命令可以查看所有文件的文件类型,我个人觉得可以挨个打开一遍也能找得到密码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ckZR4JZYLaYZrIyBLf1QqlKP0UEpFSZCQD*zH2WkFKaGTE*A4ElSbmNebUpCiPhFb.jEhFL.90lrs4zPFAKs*Y!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>5-6.利用4-5得到的密码连接到本关的主机,这关是在inhere目录下找到一个可读，大小为1033字节且不可执行的文件，用到 find 命令。参数 -size 可以用来指定文件的大小，在数字后加 ‘c’用字节表示，加’k’用 kb 表示，加’M’用 MB 表示。参数 -type 用来指定文件的类型，’f’表示普通文件，’I’表示链接文件，’d’表示目录。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dpU9Kp40FKitML*NTeS2PSfekObhfhi9BR8kcpMrvNgiyvb9oGEVXTY5f*zP5RQOUJLwsyD9IlNTMY9GMft1WY!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>6-7.利用5-6得到的密码连接到本关的主机,这一关的文件有以下特征：属于用户 bandit7；属于组 bandit6,33字节,find命令, -group bandit6 将会寻找属于组 bandit6 的文件。参数 -user bandit7 将会寻找属于用户 bandit7 的文件。因为该文件在服务器的某处，所以我们要从根目录开始找。执行命令后将会产生许多拒绝访问的报错信息。为了过滤掉这些没用的信息，我们使用 （2&gt;/dev/null）<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1WBQw3kMHYzZmtbwSfd1FrEICAA6UVQvD2mS5l81nZE2Jv91Y5ELbseHPsLAG.XyQC4wP.MwZeVtjeu1Rfm6ASE!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>7-8.利用6-7得到的密码连接到本关的主机,题目说密码在data.txt中并且在单词millionth的后面，可以grep “millionth” data.txt或者cat data.txt|grep millionth<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1cFSSh6uX2e7dMBkEL.mD6ArFX0nHFWSLe34gMxFJNEH2HiANCD5dqj.SV0Z8e3oN2UJAFS9deq7UocLo33XeL8!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>8-9.利用7-8得到的密码连接到本关的主机,下一关的密码保存在文件 data.txt中并且仅有一行只出现一次，uniq -u仅显示出一次的行列，但是使用之前需要用sort命令对文本进行排序，因为uniq命令是通过判断上下两行是否一样来判断的，所以用sort排序一下然后在uniq就能找到唯一出现的那一行了<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dARQ6KZnjnLRNg0Wl0oeHNFZjov0FsdsrtD6zn*xvdwtwFd18XZxI7M8QpQFC9QCiyuRcfa6qKqkUBu1FJIqLc!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>9-10.利用8-9得到的密码连接到本关的主机,下一关的密码保存在 data.txt 文件中，只有少部分以’=’ 开头的字符串是可读的，用cat命令之后会出现很多乱码，因此需要使用strings命令，获取可打印的字符。使用：strings data.txt<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YocUYxq2FA17M2r26NSvEIn81cg2cVq*dO1Hvr9naXTBsLK4Vz2fDZ6KsANUeR4v7abXCTVgNmChRKR2J83z2A!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>10-11.利用9-10得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件包含base64编码的数据，利用base64 -d直接解码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1VUtEI5GyGfBqRm3DRwqRZBfQAHjsCZ5L30IMdf649RROnANQUQaU3eQpCXrFksK0gpBz3d5kWnh5qOeNhRh6j0!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>11-12.利用10-11得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，其中所有小写（az）和大写（AZ）字母都已旋转了13个位置，就相当去26个字母的前13个位置与后13个位置调换了。那么我们就是用tr命令进行调换，cat data.txt | tr ‘a-zA-Z’ ‘n-za-mN-ZA-M’<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1fzOCd6fIbZPqh4HSoO3oQy9tX7YxlSsD9MAoaFMzYJQZ2iL3oARC3Me*7*U38W8m.7Eyvvz01pPeI3.S6fhsrY!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>12-13.利用11-12得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件是已重复压缩的文件。对于此级别，在/ tmp下创建一个目录，在其中可以使用mkdir进行工作可能很有用。例如：mkdir / tmp / myname123。然后使用cp复制数据文件，然后使用mv重命名该数据文件。首先按照提示，在/tmp目录下创建自定义的文件夹，然后我们发现data.txt是一个hex dump文件，里面是十六进制的内容，可以用xxd命令将其转换成二进制文件，然后用file命令看一下这个二进制是什么文件，发现是一个gzip压缩文件，那么利用mv命令把文件重命名，然后用gzip -d命令解压，发现还是一个二进制文件，继续file命令查看，不断重复，最后得到密码。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dB55TG1DJC09ZHo6kfsx6dlI7j4SlqDdy*HFOSSVzSWwNb5Cd.TvgHHIlOHIRhtMDzjKIXN1j.4Y47dOPWlb9k!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Y.M.ZDXY8374*2kAV9.rpestzhqieG38CPFM9Yy9RNc.4BC.EDard28gBBuWJcv4LUBnAf6hcuCxtAWhqsFqQk!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>13-14.利用12-13得到的密码连接到本关的主机,下一级别的密码存储在/etc/bandit_pass/bandit14中，并且只能由bandit14用户读取。对于此级别，您不会获得下一个密码，但是会获得一个可用于登录下一级别的专用SSH密钥。这道题我们使用bandit13用户登陆的，但是题目说需要我们用bandit14用户登陆才能查看密码，并且给了我们ssh的私钥，那么我们就可以利用ssh -i参数指定私钥进行登陆：ssh -i sshkey.private bandit14@localhost，再用cat打开/etc/bandit_pass/bandit14即可。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q4dLjKz4kO1ShINA8hV9vHylcRYvYKxa9T2F.wtCPD.c6VGt3RWAoh6P6hw5wAKpW.Lmpt9H1mx9H9TyFkwnJI!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>14-15.上一题已经连接到本题主机，可以通过将当前级别的密码提交到localhost上的端口30000来检索下一级的密码，用telnet连接到本地的30000端口上，然后把这关的密码发送过去。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q77UAcxgLQscmc1xdQyyFoyHIfvB0lgvavpM.IMoQG1PSS1nGTN7slBZMiU46xSOSr1WQ*PA2X7KhW0JfSLLo8!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>15-16.利用14-15得到的密码连接到本关的主机,可以通过使用SSL加密将当前级别的密码提交到localhost上的端口30001来检索下一级别的密码，openssl s_client -connect localhost:30001<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1S1fWUQdSGb*GerBYAGfJJmt5Yjz*hpy4vFBbubxw9WslFHLve.frLn3E5g.ViwUC9Mj9MSV*4GGkCfuYSfOloA!/b&bo=HANYAgAAAAADB2c!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>16-17.利用15-16得到的密码连接到本关的主机,可以通过将当前级别的密码提交到本地主机上31000到32000范围内的端口上的密码来检索下一级的凭据。首先找出这些端口中的哪些服务器正在侦听它们。然后找出其中哪些使用SSL，哪些不使用SSL。只有一台服务器将提供下一个凭据，题目中提示了nmap，直接用nmap扫描端口，nmap -p 31000-32000 localhost，发现两个端口，用openssl s_client -connect localhost:检查两个端口号，发现31790是我们需要的，另外，我们可以写一个脚本，创建一个 /tmp/key 文件夹并将密钥保存在这：cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet &gt; /tmp/key/b16pkey，然后登陆：ssh -i /tmp/key/b16pkey bandit17@localhost，用cat打开：cat /etc/bandit_pass/bandit17<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1R*tZhVz6u8dFBrBZJRD.Bpzq.vXpCRTfwTn.ULs98b6JH0vA4rBGZiqxn4Xe26M.8UnEkYT4Zg.ZJwaJhv0C4U!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h2><blockquote>
+<p>开关机命令</p>
+<blockquote>
+<p>1、shutdown –h now：立刻进行关机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、shutdown –r now：现在重新启动计算机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、reboot：现在重新启动计算机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、su -：切换用户；passwd：修改用户密码</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、logout：用户注销</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>常用快捷命令</p>
+<blockquote>
+<p>1、tab = 补全</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、ctrl + l -：清屏，类似clear命令</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、ctrl + r -：查找历史命令（history）；ctrl+c = 终止</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、ctrl+k = 删除此处至末尾所有内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、ctrl+u = 删除此处至开始所有内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>展示目录列表命令ls（list）</p>
+<blockquote>
+<p>1、ls    展示当前目录下的可见文件</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、ls -a   展示当前目录下所有的文件（包括隐藏的文件）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、ls -l(ll)   展示当前目录下文件的详细信息</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、ll -a    展示当前目录下所有文件的详细信息</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、ll -h   友好的显示当前目录下文件的详细信息（其实就是文件的大小可读性更强了）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>切换目录命令cd（change directory）</p>
+<blockquote>
+<p>1、cd test    切换到test目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、cd .. 切换到上一级目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、cd / 切换到系统根目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、cd ~ 切换到当前用户的根目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、cd - 切换到上一级所在的目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>目录的创建（mkdir）和删除（rmdir）命令</p>
+<blockquote>
+<p>1、mkdir test 在当前目录下创建一个test目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、mkdir -p test/a/b 在test目录下的a目录下创建一个b目录，如果上一级目录不存在，则连它的父目录一起创建</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、rmdir test 删除当前目录下的test目录（注意：该命令只能够删除空目录）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>文件打包或解压命令tar</p>
+<blockquote>
+<p>Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的,而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz。</p>
+<blockquote>
+<p>tar -zcvf 打包压缩后的文件名 要打包压缩的文件</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>tar [-xvf] 压缩文件</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>端口管理</p>
+</blockquote>
+<blockquote>
+<p>nststat:查看端口开放情况</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-a:表示列举所有的连接、服务器监听</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-t:列出所有tcp协议的服务</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-u:列出所有udp协议的服务</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-n:使用端口号来显示</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-l:列出所有的监听</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-p:列出所有服务的进程id（pid）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>常用：netstat -atunlp</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>进程管理：ps</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>ps:查当前进程</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>ps -ef | grep java:查看java的进程</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>jps:==(ps -ef | grep java) 只有在linux中安装了JDK才能用</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>网络管理：ping、ifconfig</p>
+</blockquote>
+<blockquote>
+<p>服务管理命令：</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>service:            </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>格式：<br>service s_name start|stop|status|restart</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>linux系统所有自带服务名称：/etc/init.d/</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>常用：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>关闭防火墙服务<br>:service iptables stop</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>重启网络服务：<br>service network restart</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>mysql数据库服务的名称：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>mysql版本低于5.5  mysqld</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>mysql版本高于5.5  mysql</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>more</p>
+<blockquote>
+<p>在 more 这个程序的运行过程中，你有几个按键可以按的：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>空白键 (space)：代表向下翻一页</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Enter         ：代表向下翻『一行』</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>/字串         ：代表在这个显示的内容当中，向下搜寻『字串』这个关键字</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>:f            ：立刻显示出档名以及目前显示的行数</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>q             ：代表立刻离开 more ，不再显示该文件内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管线无用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" itemprop="url">0115-05-邓彪（日报）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-15T10:03:21+08:00">
+                2020-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E6%8A%A5/" itemprop="url" rel="index">
+                    <span itemprop="name">日报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>更新日期：2020/01/15</p>
+</blockquote>
+<h2 id="上午："><a href="#上午：" class="headerlink" title="上午："></a>上午：</h2><blockquote>
+<p>日常进行的晨讲，邹江东同学唱歌很好听。<br>接着我们一起看了：输入url到页面加载完成的过程中发生了什么，看似在一秒内就完成了，但是中间的过程其实是很多的<br>接着介绍了很多的工具，一些常用的渗透工具的用途和用法都简单的介绍了一下，寻找工具的方式<br>玩了一个Hacknet的游戏</p>
+</blockquote>
+<h2 id="下午："><a href="#下午：" class="headerlink" title="下午："></a>下午：</h2><blockquote>
+<p>介绍了乔布斯的经历及ipad，phone的发展历程<br>讲述了linux发行版本<br>linux操作命令，目录和文件管理以及系统分区介绍等</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/14/0114-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3738,487 +4388,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/10/0110-05-%E9%82%93%E5%BD%AA-%E4%BD%9C%E4%B8%9A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yibai">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yibai的空间">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/10/0110-05-%E9%82%93%E5%BD%AA-%E4%BD%9C%E4%B8%9A/" itemprop="url">0110-05-邓彪-作业</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-10T09:54:10+08:00">
-                2020-01-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
-                    <span itemprop="name">作业</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>更新日期：2020/01/10</p>
-<h2 id="Metasploitable-2"><a href="#Metasploitable-2" class="headerlink" title="Metasploitable 2"></a>Metasploitable 2</h2><blockquote>
-<p>作用是用来作为MSF攻击用的靶机,他是一个具有无数未打补丁漏洞与开放了无数高危端口的渗透演练系统,Metasploitable已经提前安装了Web漏洞演练系统，当打开Metasploitable并接入网络后，Web服务器就会自动开启。<br>Metasploitable上配置的Web漏洞演练系统有以下几个</p>
-<blockquote>
-<p>mutillidae (NOWASP Mutillidae 2.1.19)<br>dvwa (Damn Vulnerable Web Application)<br>tikiwiki (TWiki)<br>dav (WebDav)</p>
-</blockquote>
-</blockquote>
-<h2 id="利用Nessus将Metasploitable2作为靶机进行扫描"><a href="#利用Nessus将Metasploitable2作为靶机进行扫描" class="headerlink" title="利用Nessus将Metasploitable2作为靶机进行扫描"></a>利用Nessus将Metasploitable2作为靶机进行扫描</h2><blockquote>
-<p>用VM打开Metasploitable2，查看靶机的IP地址<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1YU6nuETuaDzwws3wYUDy2MAyeAYbN.nJt8e*bMV6LSOvPYwhLmVbRXzcnOyAn5P9mRlY8SI2bQ37c4HRLdJSe8!/b&bo=0ALgAQAAAAADBxE!&rf=viewer_4" alt><br>用浏览器输入Metasploitable2的IP地址，验证是否打开了Web服务(可以打击演练系统进行漏洞练习)<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dJbwb.HtEMo5uDoa1MNX9l1s3TK2b*0Hwfnyi66le0im8UcJztJbBb7cRn3R6sGhMCGtyyQUJ65aTziETcgTj0!/b&bo=bQIbAgAAAAADB1Q!&rf=viewer_4" alt><br>打开Nessus，添加扫描方式<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1QEqTcUu8R8*yHJTnOzsDgMkBPA8sKf9z0RD*yXyXlv8lfrxfClrEs97ELZPLgND2lrNPwHwJl1ixx2AXlyedSw!/b&bo=dgXwAgAAAAADB6M!&rf=viewer_4" alt><br>输入Metasploitable2的IP地址,并且启动扫描插件<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1brkolZdXE2Va540EzTsZGTWbEd*k.a8n7euFp27vpHUDgzt.Iqv1AdiVVhlmVuxdM7ZQ65cHAuZ7oh0Nb2FaG0!/b&bo=lgQiAgAAAAADB5A!&rf=viewer_4" alt><br>开始扫描，得到结果<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1eSV1pcUXt6TLB6aEeVd1s7RcvEHGPDpBCV*z2At77uQja2dtl9SQVNuBc1*BsKQK*I2orwsmkdUbFIGo55DYpY!/b&bo=gAdKAwAAAAADB.w!&rf=viewer_4" alt></p>
-</blockquote>
-<h2 id="AWVS安装"><a href="#AWVS安装" class="headerlink" title="AWVS安装"></a>AWVS安装</h2><blockquote>
-<p>打开windows版本的AWVS,打开acunetix_12.0.190902105.exe<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1aIIs1sNQDmWWyVXsrJGyNQktwGCf7yL3ae9xyFVQzTgduzmCxKfwUv1.hZmKfnQmTQnAEX*hjqiP2F8lZDGBcU!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br>按顺序安装，邮箱，密码，接口好像都是可以自己随便设置的<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1XheYtPOyDBW5w9Bs4Db9VXba4BFw8eF61jZjuksJFjCGhq*T4jh14.1pYfQp8bTt8Qyw*zERKLxAps3l1sy3Qk!/b&bo=SgLeAQAAAAADB7U!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1RqlxEettxEKLO5aJrUDM*UZsISzu8jAxx6d98B74tKfjuAoUXDDD01MdF.8iYIIuiyrp0p8vvi9x.NJtNnNi0Q!/b&bo=SgLeAQAAAAADB7U!&rf=viewer_4" alt><br>安装完成后把patch.dat patch.exe 复制到安装目录下<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1buymByy7*xaPMdrV5znCXYRaTbWqWhxRcOkQwoFhkyNPLfL7cc7fgcx3*yvIrINdZUJntUFgNiLSHXIJfteznY!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1fkUDUd4SrYu3DU6DwJOnUS03S9eL3rN2z9iUm5rXgdLYSxW7rBS0iP4CjmnOP9jS58r13HLSIcA*xi*.twaP5c!/b&bo=2gFxAQAAAAADB4k!&rf=viewer_4" alt><br>打开patch.exe,会出现一个黑框里面让你输入License Key和其他的一些设置，我全部设置成了一样的52pojie，也就是说这里应该也是可以随便填的，然后就完事了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1T25Yg4KWRHBI3AAyWRyCkBSx0ZA9pSeg5oC2QMEg9.20gPwtmvvGlBFDBkGl78T*YxazOMhj1mD5gDiBes6xwE!/b&bo=1wSHAgAAAAADB3Q!&rf=viewer_4" alt><br>重新打开软件Acunetix，会跳出一个浏览器界面，输入前面自己设置的邮箱和密码就进去了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1UNBAHKGOA56.3cJIW8HJ.7q7KXALe9cjU6nvqweWu6yk*.IpFX.r8WRdzl6FqL0yReX5Pf*LRBexiG5vSI32.k!/b&bo=wQVlAwAAAAADB4A!&rf=viewer_4" alt></p>
-</blockquote>
-<h2 id="利用AWVS将Metasploitable2作为靶机进行扫描"><a href="#利用AWVS将Metasploitable2作为靶机进行扫描" class="headerlink" title="利用AWVS将Metasploitable2作为靶机进行扫描"></a>利用AWVS将Metasploitable2作为靶机进行扫描</h2><blockquote>
-<p>打开AWVS，添加目标，输入Metasploitable2的地址<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1fgseYPiXHVC2nLiOQxr.Qo1f*fQkbE6W54cLwhy.VDY3SODBSZVpbv6hHNES8dJWhO06V0BdQHIDtlwffluO28!/b&bo=CAWuAQAAAAADF5A!&rf=viewer_4" alt><br>选择保存后点击扫描将对目标进行扫描<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1Sz0zGnzggHjaNuYvXUgReHSFSpZpoPln7P*XsgHkasxD6AznF7uBxmL.niWGDrzpRvZAy*4otKjTzPExnDRgOI!/b&bo=cwNHAgAAAAARBwU!&rf=viewer_4" alt><br>得到扫描结果<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dKVZ9kIyEzQ3W8dNIZl6JzX40vjoYAA8LFiGNdqUOhCQUB7IfT77UTIeuDSJiKJI*vawFEGoOKdRQkRY*LyEJc!/b&bo=1gU3AwAAAAADB8U!&rf=viewer_4" alt></p>
-</blockquote>
-<h2 id="openvas的安装非常不顺利，截至此时仍然没有安装成功"><a href="#openvas的安装非常不顺利，截至此时仍然没有安装成功" class="headerlink" title="openvas的安装非常不顺利，截至此时仍然没有安装成功"></a>openvas的安装非常不顺利，截至此时仍然没有安装成功</h2><blockquote>
-<p>顺便用kali扫描了一下Metasploitable2的端口开放情况<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SpErMzywxDlowJLRROUr1aBVV2GkNhUCxMoCoi8bb04YkWHTiFglE0F8b8KL6q354TsrA*JjZVXTu9JlgjiXUw!/b&bo=jwLTAQAAAAADB30!&rf=viewer_4" alt></p>
-</blockquote>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>AWVS</p>
-<blockquote>
-<p>AWVS扫描了很久的时候还没有完成扫描过程，可见AWVS的扫描效率可能不那么高<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1dIAJ34eJOEfMM*saQ*LgUiUJssTxZoc4En9INfrWOMyjfBLOOxvYNirLysehDYxMvsWt90bFv5xILyECeG5q7E!/b&bo=3wXHAQAAAAADBz4!&rf=viewer_4" alt><br>AWVS给出的漏洞细节比较清晰，给出具体的攻击细节和文件<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1RPpptLghaBT8j7WFi9XFnS6QhUeRjo*3bqXibygEWxy1UQWXUWvxfNS2Rks1vk2L3bNeyw96QsQEPnJ3Qb5qr0!/b&bo=ZQZaAgAAAAADBxk!&rf=viewer_4" alt><br>AWVS可以给出扫描的网站结构<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SErk8FonMTMr0lNLYeUoyl1eslPiQvF9wUPM8oN5oRVdMGeHkWu73468G1S3HpA.7B5SPeochDvlazqvY5ysg4!/anull&bo=gAdKAwAAAAADB.w!&rf=photolist&t=5" alt><br>AWVS给出的漏洞数量比Nessus多一些,效果比较好<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1SnEPRq*W4XezDqY43Dk8.5VVy32TH5MzF5qri4VJ6tGtxVM1V42T2oLlZ*dLfkz0Htr7J3YvXQtCLcqLJw5juE!/b&bo=EQMhAQAAAAADBxA!&rf=viewer_4" alt><br>从整体看AWVS是一款非常强大的漏扫工具，希望以后能够更好的利用它</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>Nessus</p>
-<blockquote>
-<p>它的漏洞展示分类更加详细，比较明了<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1bM4LVKjkQoCyBfAZl9Xt2k*YJbHqFMdeWOtatpaZ44xRHtYy0IoXGD1aSKiv.10BBL0e6aVrTyNaCmlQjoQrag!/b&bo=HQavAgAAAAADB5Q!&rf=viewer_4" alt><br>有非常多的扫描方式和插件，可以自定义更有针对性的进行扫描<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1UwY0lmy6jV76*92LrpO0mvA5E04NN9ZFjGD*pa3JnwLcDj3zL4NwCwqOlq3dW0WNOevOgNNyJxVhyGzdqXcThA!/b&bo=aAXhAgAAAAADB6w!&rf=viewer_4" alt><br>扫描速度比较快，效率很高<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1T6LpK9fcjpQh7r9rkX8*BxEUTD*a.Mb2ru4Usy75pmAS5GidUN9gztdeaBktjK9971D.aSABZXNGMHNiW31yxQ!/b&bo=DAZAAgAAAAADB2o!&rf=viewer_4" alt><br>Neeeus会给出漏洞描述，更好的去了解漏洞是如何产生和利用的<br><img src="http://m.qpic.cn/psc?/V14DGvXv4L5pY4/jASqEt644m*KNERKGtvN1TkVVPm9wUytYNNdPRgqWvtmT.XGFoJ75TGRQDJWEiOLIWNPxR1hiGcp3j3pkE9j7JR8NYtF6IafyflF*Qn1hnw!/b&bo=ZANrAgAAAAADByw!&rf=viewer_4" alt><br>Nessus和AWVS两款工具都是我们以后需要经常使用到的，所以应该去尽可能的熟练使用，挖出更多的漏洞。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>关于利用这些漏洞去渗透,从网上看了一些方法，都是比较复杂的，对于现阶段的我来说还是比较困难的，所以再多学习一段时间再去试试能不能将这些漏洞利用起来进行渗透操作。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/09/0109-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yibai">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yibai的空间">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/09/0109-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/" itemprop="url">0109-05-邓彪（作业）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-09T23:22:01+08:00">
-                2020-01-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="index">
-                    <span itemprop="name">作业</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>更新日期：2020/01/09</p>
-<h2 id="信息收集补全版"><a href="#信息收集补全版" class="headerlink" title="信息收集补全版"></a>信息收集补全版</h2><p>信息收集分为主动信息收集和被动信息收集。</p>
-<blockquote>
-<p>主动的信息收集方式：通过直接访问、扫描网站，这种将流量流经网站的行为及通过目标识别，端口扫描，指纹识别等方式<br>被动的信息收集方式：通过收集域名信息，DNS记录分析，收集敏感信息和跟踪路由信息及利用第三方的服务对目标进行访问了解，比如：Google搜索</p>
-</blockquote>
-<h2 id="域名-Whois查询"><a href="#域名-Whois查询" class="headerlink" title="域名(Whois查询)"></a>域名(Whois查询)</h2><p>whois是用来查询域名注册所有者等信息的传输协议。简单说，whois就是一个用来查询域名是否已经被注册，以及注册域名的详细信息的数据库（如域名所有人、域名注册商）。通过whois来实现对域名信息的查询。早期的whois查询多以命令行接口存在，但是现在出现了一些网页接口简化的线上查询工具，可以一次向不同的数据库查询。网页接口的查询工具仍然依赖whois协议向服务器发送查询请求，命令行接口的工具仍然被系统管理员广泛使用。whois通常使用TCP协议43端口。每个域名/IP的whois信息由对应的管理机构保存</p>
-<h3 id="Whois查询工具"><a href="#Whois查询工具" class="headerlink" title="Whois查询工具"></a>Whois查询工具</h3><blockquote>
-<p><a href="https://who.is/" target="_blank" rel="noopener">who.is:</a><a href="https://who.is" target="_blank" rel="noopener">https://who.is</a><br><a href="https://whois.aizhan.com/" target="_blank" rel="noopener">爱站:</a><a href="https://whois.aizhan.com" target="_blank" rel="noopener">https://whois.aizhan.com</a><br><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步:</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a><br><a href="http://whois.chinaz.com/" target="_blank" rel="noopener">站长工具:</a><a href="http://whois.chinaz.com" target="_blank" rel="noopener">http://whois.chinaz.com</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1VU4Ggyl0iQqrBapYNBF3b13aWDRrkxe08uzzEgBd*IBbQPC*PXL8xlDXavoTCDPlMzCNPhtoDQyCceZGf91Z3s!/b&bo=rwQ*AgAAAAADB7Q!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
-<p>企业的备案信息</p>
-<blockquote>
-<p><a href="http://www.beianbeian.com/" target="_blank" rel="noopener">ICP备案查询网:</a><a href="http://www.beianbeian.com" target="_blank" rel="noopener">http://www.beianbeian.com</a><br><a href="http://www.gsxt.gov.cn/index.html/" target="_blank" rel="noopener">国家企业信用信息公示系统:</a><a href="http://www.gsxt.gov.cn/index.html" target="_blank" rel="noopener">http://www.gsxt.gov.cn/index.html</a><br><a href="https://www.tianyancha.com/" target="_blank" rel="noopener">天眼查:</a><a href="https://www.tianyancha.com" target="_blank" rel="noopener">https://www.tianyancha.com</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1VsXh9hvZ.Z4jCkzXqOFaQoDtGRVK4iWNMT0PmBJzEZcela.FODijeDUBWnmGAMMrr7RZIN7wgqsqymsbZeGLyU!/b&bo=lgQNAwAAAAADB74!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<h2 id="子域名收集"><a href="#子域名收集" class="headerlink" title="子域名收集"></a>子域名收集</h2><h3 id="查询工具"><a href="#查询工具" class="headerlink" title="查询工具"></a>查询工具</h3><blockquote>
-<p>1.Google、baidu等传统搜索引擎<br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1c1g4NQir75o7bUeQ5ijiJHNmR1Uk4*d.FESFXY.u1fry13MONhpn7i0Zc.F*SxXuB7GOqzUQ69.qCWQCyCYpkk!/b&bo=NQKLAgAAAAADB5w!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>谷歌Hacking语法</p>
-<blockquote>
-<p>intitle:搜索网页标题中包含有特定字符的网页。例如输入“intitle: cbi”，这样网页标题中带有cbi的网页都会被搜索出来。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>inurl:搜索包含有特定字符的URL。例如输入“inurl:cbi”，则可以找到带有cbi字符的URL。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>intext:搜索网页正文内容中的指定字符，例如输入“intext:cbi”。这个语法类似我们平时在某些网站中使用的“文章内容搜索”功能。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>Filetype:搜索指定类型的文件。例如输入“filetype:cbi”，将返回所有以cbi结尾的文件URL。</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>Site:找到与指定网站有联系的URL。例如输入“Site：family.chinaok.com”。所有和这个网站有联系的URL都会被显示。<br>link:搜索某个网站的链接<br>or:同时搜索两个或更多的关键字</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>典型用法</p>
-<blockquote>
-<p>1、找管理后台地址</p>
-<blockquote>
-<p>site：xxx.com intext:管理|后台|登陆|用户名|密码|系统|账号<br>site：xxx.com inurl:login/admin/manage/manager/admin_login/system<br>site：xxx.com intitle:管理|后台|登陆<br>2、找上传类漏洞地址：<br>site:xxx.com inurl:file<br>site:xxx.com inurl:upload<br>3、找注入页面:<br>site:xxx.com inurl:php？id=<br>4、找编辑器页面：<br>site:xxx.com inurl:ewebeditor</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>2.网络空间安全搜索引擎</p>
-<blockquote>
-<p><a href="https://www.zoomeye.org/" target="_blank" rel="noopener">zoomeye(钟馗之眼):</a><a href="https://www.zoomeye.org" target="_blank" rel="noopener">https://www.zoomeye.org</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1RJ9HNfT9SNAiTrCXoHmTpw2pndPwt0qg6rNmnSBChyUEjyzClCHLkrc3Lzed4UWDpTWIyLJRQC1vcVQ6V1dUcU!/b&bo=RQNUAgAAAAADBzI!&rf=viewer_4" alt><br><a href="https://www.shodan.io/" target="_blank" rel="noopener">shodan:</a><a href="https://www.shodan.io" target="_blank" rel="noopener">https://www.shodan.io</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1Sh8Aw8T74NeF9yHNQ9iFIxr1AbZIEs0HgTUGVNlGwj2IPJ9mQvBi.QKzYl9BFDUuyP2GhWeJBwaLXsR3fTJ*N8!/b&bo=lwRuAgAAAAADB90!&rf=viewer_4" alt><br><a href="https://fofa.so/" target="_blank" rel="noopener">Fofa:</a><a href="https://fofa.so" target="_blank" rel="noopener">https://fofa.so</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1WHapzHqYkK3BWdg5wdcPgLxRF3.utWjeZFnJo9H64Bl0jKAMNC3Ld3stgzFbSL6RlVsxDRvr88ASarSybnbZF8!/b&bo=ggSLAgAAAAADBy0!&rf=viewer_4" alt><br><a href="https://www.censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://www.censys.io" target="_blank" rel="noopener">https://www.censys.io</a><br><a href="https://www.dnsdb.io/" target="_blank" rel="noopener">Dnsdb搜索引擎：</a><a href="https://www.dnsdb.io" target="_blank" rel="noopener">https://www.dnsdb.io</a></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>fofa语法</p>
-<blockquote>
-<p>title=”abc” 从标题中搜索abc。例：标题中有北京的网站<br>header=”abc” 从http头中搜索abc。例：jboss服务器<br>body=”abc” 从html正文中搜索abc。例：正文包含Hacked by<br>domain=”qq.com” 搜索根域名带有qq.com的网站。例： 根域名是qq.com的网站<br>host=”.gov.cn” 从url中搜索.gov.cn,注意搜索要用host作为名称。例： 政府网站, 教育网站<br>port=”443” 查找对应443端口的资产。例： 查找对应443端口的资产<br>ip=”1.1.1.1” 从ip中搜索包含1.1.1.1的网站,注意搜索要用ip作为名称。例： 查询IP为220.181.111.1的网站; 如果想要查询网段，可以是：ip=”220.181.111.1/24”，例如查询IP为220.181.111.1的C网段资产<br>protocol=”https” 搜索制定协议类型(在开启端口扫描的情况下有效)。例： 查询https协议资产<br>city=”Beijing” 搜索指定城市的资产。例： 搜索指定城市的资产<br>region=”Zhejiang” 搜索指定行政区的资产。例： 搜索指定行政区的资产<br>country=”CN” 搜索指定国家(编码)的资产。例： 搜索指定国家(编码)的资产<br>cert=”google” 搜索证书(https或者imaps等)中带有google的资产。例： 搜索证书(https或者imaps等)中带有google的资产</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>3.在线查询接口(打开网站输入主域名即可)</p>
-<blockquote>
-<p><a href="https://www.virustotal.com/" target="_blank" rel="noopener">VirusTotal:</a><a href="https://www.virustotal.com" target="_blank" rel="noopener">https://www.virustotal.com</a> (还可以对文件进行安全性测试)<br><a href="https://censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://censys.io" target="_blank" rel="noopener">https://censys.io</a><br><a href="http://tool.chinaz.com/subdomain/" target="_blank" rel="noopener">站长之家:</a><a href="http://tool.chinaz.com/subdomain" target="_blank" rel="noopener">http://tool.chinaz.com/subdomain</a><br><a href="http://searchdns.netcraft.com/" target="_blank" rel="noopener">Netcraft:</a><a href="http://searchdns.netcraft.com" target="_blank" rel="noopener">http://searchdns.netcraft.com</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1d5K8rcn.thB2uvQd3avMS91xpk0FiLCUDG78f9iQhGVYCYIwQPe8YSRZMWwyuTwjczVSsmARr2Y36jI33OKvmw!/b&bo=vwNCAwAAAAADB98!&rf=viewer_4" alt><br><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步在线:</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1UPmPYvqRu*DEBPokMIIib4rvOVOVeVHSpeDAQXuC8muM7UuVxF6*s7fGEeRPOH6iehjW5C8FYsB.WMNRaPKbEk!/b&bo=VQTLAgAAAAADB7o!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>4.爆破工具</p>
-<blockquote>
-<p>Layer子域名挖掘机<br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1efN69u92aPTKN5Tk8qm3tG99g6Ksj1NDnTyE5kujK6xhqatICAaz47OKQSKFatYJyS9I17KiYpalCByGERWksA!/b&bo=WgMoAQAAAAADB1I!&rf=viewer_4" alt><br>subDomainsBrute(githun下载)<br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1TF6l1Z4alrUOAiUI49A6nvosOnb6EijCtgWi3eX9BWD3lOEXwYw2LeAynBL8EBdoRIBUuVpuCVdwbw8XbQhaCI!/b&bo=0wTfAQAAAAARBzk!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>5.DNS查询</p>
-<blockquote>
-<p><a href="https://www.dnsdb.io/zh-cn/" target="_blank" rel="noopener">Dnsdb:</a><a href="https://www.dnsdb.io/zh-cn" target="_blank" rel="noopener">https://www.dnsdb.io/zh-cn</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1UyFCMiaShABvZ0399mmazLJpCsVlRDwEa9M1Xm7LMpO2lo4TIO8YIfoib7SeAa*rS15jrtcvrPeRfVUOTzD9DA!/b&bo=kwMlAgAAAAADB5U!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>6.HTTPS证书</p>
-<blockquote>
-<p><a href="https://crt.sh/?Identity=%%.github.com/" target="_blank" rel="noopener">Crt.sh:</a><a href="https://crt.sh/?Identity=%%.github.com" target="_blank" rel="noopener">https://crt.sh/?Identity=%%.github.com</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1buBuDgTMym1VkY9b8gHA9yG3cTYq8YXODT*ptzqm8nNO*ql7sA6Y*sBm7xSpZ1KpX11Zm5Sh32wXPkK4IjnAbc!/b&bo=2ATNAQAAAAADBzI!&rf=viewer_4" alt><br><a href="https://censys.io/" target="_blank" rel="noopener">Censys:</a><a href="https://censys.io" target="_blank" rel="noopener">https://censys.io</a><br><img src="http://a1.qpic.cn/psc?/V14DGvXv1Kapq8/ENmuKd2PHQoigBx2P9ktWUiB1OaD75rDFnmtRbJE8oIejeq8Qkk29pkJysKj3w5WRrZxlckc3Dh2iJOG9wd8Hw!!/b&ek=1&kp=1&pt=0&bo=tgT9AgAAAAADJ08!&tl=1&vuin=707771340&tm=1578492000&sce=60-1-1&rf=viewer_4" alt><br><a href="https://certdb.com/domain/github.com/" target="_blank" rel="noopener">Spyse:</a><a href="https://certdb.com/domain/github.com" target="_blank" rel="noopener">https://certdb.com/domain/github.com</a></p>
-</blockquote>
-</blockquote>
-<h2 id="相关域名收集"><a href="#相关域名收集" class="headerlink" title="相关域名收集"></a>相关域名收集</h2><h3 id="旁站及c段收集"><a href="#旁站及c段收集" class="headerlink" title="旁站及c段收集"></a>旁站及c段收集</h3><p>旁站指的是同一服务器上的其他网站，很多时候，有些网站可能不是那么容易入侵。那么，可以查看该网站所在的服务器上是否还有其他网站。如果有其他网站的话，可以先拿下其他网站的webshell，然后再提权拿到服务器的权限，最后就自然可以拿下该网站了！<br>C段指的是同一内网段内的其他服务器，每个IP有ABCD四个段，举个例子，192.168.0.1，A段就是192，B段是168，C段是0，D段是1，而C段嗅探的意思就是拿下它同一C段中的其中一台服务器，也就是说是D段1-255中的一台服务器，然后利用工具嗅探拿下该服务器</p>
-<p>查询工具</p>
-<blockquote>
-<p><a href="http://www.webscan.cc/" target="_blank" rel="noopener">Webscan:</a><a href="http://www.webscan.cc" target="_blank" rel="noopener">http://www.webscan.cc</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1VNCxNkb6jCFiI4hN.Ig24vgMhMX4YnB513tgpQQLI7I3UoAS3FAnXR*6X86PxCX.*RkLkqh18w3M0T*BWrPXD8!/b&bo=ygNqAgAAAAADB4M!&rf=viewer_4" alt><br><a href="https://phpinfo.me/bing.php/" target="_blank" rel="noopener">Phpinfo:</a><a href="https://phpinfo.me/bing.php" target="_blank" rel="noopener">https://phpinfo.me/bing.php</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1e5Iz5fIE8baAYB1rjoLsAoAEcQdDqe68i8uxQyILumNir*MLCIZSpBA0PZxcZ.6BFVtCRF7PJHLq7l.PWemsiU!/b&bo=eQPkAQAAAAADB70!&rf=viewer_4" alt></p>
-</blockquote>
-<h2 id="真实IP收集判断"><a href="#真实IP收集判断" class="headerlink" title="真实IP收集判断"></a>真实IP收集判断</h2><blockquote>
-<p>1.查询历史DNS记录:查看IP与域名绑定的历史记录,可能会存在使用CDN前的记录<br>相关查询网站：</p>
-<blockquote>
-<p><a href="https://dnsdb.io/zh-cn/" target="_blank" rel="noopener">Dnsdb:</a><a href="https://dnsdb.io/zh-cn" target="_blank" rel="noopener">https://dnsdb.io/zh-cn</a><br><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步在线：</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1UPmPYvqRu*DEBPokMIIib4rvOVOVeVHSpeDAQXuC8muM7UuVxF6*s7fGEeRPOH6iehjW5C8FYsB.WMNRaPKbEk!/b&bo=VQTLAgAAAAADB7o!&rf=viewer_4" alt><br><a href="http://toolbar.netcraft.com/site_report?url=/" target="_blank" rel="noopener">Netcraft:</a><a href="http://toolbar.netcraft.com/site_report?url=" target="_blank" rel="noopener">http://toolbar.netcraft.com/site_report?url=</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1d5K8rcn.thB2uvQd3avMS91xpk0FiLCUDG78f9iQhGVYCYIwQPe8YSRZMWwyuTwjczVSsmARr2Y36jI33OKvmw!/b&bo=vwNCAwAAAAADB98!&rf=viewer_4" alt><br><a href="http://viewdns.info/" target="_blank" rel="noopener">View:</a><a href="http://viewdns.info" target="_blank" rel="noopener">http://viewdns.info</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv1Kapq8/jASqEt644m*KNERKGtvN1YuVAKRFi8V4yuyA3rZWZ39fAykLJRa8IsbmM41UlaeGMIOFba9zbFRi2Zy0E7OZyQJ57wFLhX8h37Xsd4rOf8o!/b&bo=RQT3AgAAAAADB5Y!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>2.多地ping域名法:黑客也可以从多个地点ping他们想要确认的域名，若返回的是不同的ip，那么服务器确定使用了cdn，返回的ip也不是服务器的真实ip(试了一下加载不出很尴尬)<br><a href="http://itools.com/tool/just-ping/" target="_blank" rel="noopener">just ping:</a><a href="http://itools.com/tool/just-ping" target="_blank" rel="noopener">http://itools.com/tool/just-ping</a></p>
-</blockquote>
-<blockquote>
-<p>3.“常识”判断法</p>
-<blockquote>
-<p>1.在反查网站ip时，如果此网站有1000多个不同域名，那么这个ip多半不是真实ip。常用的ip反查工具有<a href="http://s.tool.chinaz.com/same" target="_blank" rel="noopener">站长工具</a>、<a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步在线</a>等等。微步在线支持同服域名查询、子域名查询、服务查询、whois反查等，要注意的是，查询部分信息有次数限制，需先注册账号。<br>2.如果一个asp或者asp.net网站返回的头字段的server不是IIS、而是Nginx，那么多半是用了nginx反向代理，而不是真实ip。<br>3.如果ip定位是在常见cdn服务商的服务器上，那么是真实ip的可能性就微乎其微了。</p>
-</blockquote>
-</blockquote>
-<h2 id="社工"><a href="#社工" class="headerlink" title="社工"></a>社工</h2><blockquote>
-<p>在网站上收集对象的情况：公司服务、产品，地理位置，联系电话，高管成员，支持论坛，电子邮件命名规则，可能用于密码分析的特殊字符或短语<br>收集方式：公共服务器、社交媒体、搜索引擎、whois域名信息查询、个人博客、个人网站、公开报告等。（Maltego可以帮助完成基于网页的被动信息收集和查询工作）</p>
-</blockquote>
-<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><blockquote>
-<p>RouterScan(将IP段范围输入再点击开始即可，也可以自己制定相应的端口，可以去文件下的port.txt文件添加)<br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1Wg3Pa.hFv2hQUxL6cdUHqDkGjQaKDvCLrK0rZPj2rs*F89nOP2qNSsSW1*ibmXFf*MMOhgoxkpuOwf0nL.2JYs!/b&bo=JwWHAQAAAAADB4Y!&rf=viewer_4" alt><br>Nmap(有图形界面和命令行两种方式)<br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1amSokDF1z3DMlNwkuA0EuNu1YDj5228hdxjXftXFVx2M5ui.IShw0HGAqWW3sEV0OuZx4IMcibIvMTSM2.i4yY!/b&bo=ywJdAwAAAAADB7U!&rf=viewer_4" alt></p>
-<blockquote>
-<p>nmap+ ip地址 （nmap简单扫描）<br>namp -vv+ ip地址 (nmap简单扫描，并对结果返回详细的描述输出)<br>nmap -p(range)+ ip地址  (（range）为要扫描的端口范围，端口大小不能超过65535)<br>nmap -p(指定端口) +ip地址 （nmap 指定端口扫描）<br>nmap -sP +ip地址 (nmap ping 扫描,利用类似windows/linux系统下的ping 方式进行扫描)<br>nmap -sP <network address>  (nmap设置扫描一个网段下的ip,CIDR为设置的子网掩码（/24,/16,/8等）)<br>nmap -O  +ip地址 (nmap操作系统类型的探测)</network></p>
-</blockquote>
-</blockquote>
-<h2 id="网络架构"><a href="#网络架构" class="headerlink" title="网络架构"></a>网络架构</h2><blockquote>
-<p>服务器类型(服务器信息包括服务器用的操作系统：Linux还是Windows)</p>
-<blockquote>
-<p>可以用Nmap探测操作系统(nmap -O +ip地址 (nmap操作系统类型的探测))</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>指纹识别</p>
-<blockquote>
-<p><a href="http://www.yunsee.cn/finger.html/" target="_blank" rel="noopener">云悉:</a><a href="http://www.yunsee.cn/finger.html" target="_blank" rel="noopener">http://www.yunsee.cn/finger.html</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1eAFD0f1C7DK.XgT4m.*M3TBWPDO.iT8rkh3yxpergpq1Ra7pSEgcln2tQLq4YJ*sr1ADnMxkU0AluLvm2l1b9o!/b&bo=LwQ8AgAAAAADBzc!&rf=viewer_4" alt><br><a href="http://whatweb.bugscaner.com/look/" target="_blank" rel="noopener">BugScaner:</a><a href="http://whatweb.bugscaner.com/look" target="_blank" rel="noopener">http://whatweb.bugscaner.com/look</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1YrrTL*UOPp3ES9dsnFziin3vZSZHXWeSP3ZaIxL9RnWpGcfw*42iy0jout80gbEUPbZZartNHivwZhRGEofgok!/b&bo=JgR*AwAAAAADB3w!&rf=viewer_4" alt><br><a href="https://whatweb.net/" target="_blank" rel="noopener">WhatWeb:</a><a href="https://whatweb.net/" target="_blank" rel="noopener">https://whatweb.net/</a><br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1fo3fNxSzJnKEKkbJhnolpnT.CTjZMcZVKlCp2*tyPgtLPZb6SK4mIM9v3f58K*ZJJg.NCPmNxYi8yWspmgsA2E!/b&bo=JgP4AQAAAAADB*4!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>CMS</p>
-<blockquote>
-<p>用CMS在线网站查看CMS，再看能否利用CMS的漏洞进行攻击<br>wappalyer插件(可以看开发的框架，即开发语言)</p>
-</blockquote>
-</blockquote>
-<h2 id="敏感文件"><a href="#敏感文件" class="headerlink" title="敏感文件"></a>敏感文件</h2><blockquote>
-<p>git泄露</p>
-<blockquote>
-<p>可以用githack进行源代码重建<br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1euaBQ1HsGNNNLYohr3M9n2eQxg0SG8Z7TTXmkCXgRnONfyQtsGNqLsl4c6FJYreZ9*pAhOA6EU807dDjQPUQ7A!/b&bo=AQQtAQAAAAADBws!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>网页源代码泄露敏感信息，如接口信息，可以通过构造修改接口参数进行越权访问.</p>
-</blockquote>
-<blockquote>
-<p>后台目录</p>
-<blockquote>
-<p>御剑后台扫描<br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1UPUwVTPUClrJ6k5vVa5zZbI8HlHM34iaAb5sdruB5SkKhdRAACB4zcC0MB2KO5BhGNhiCjGxqvMpcH3*9*pBeQ!/b&bo=qgOwAgAAAAADBzk!&rf=viewer_4" alt><br>dirsearch(github下载)<br><img src="http://m.qpic.cn/psc?/V14DGvXv0FDcvc/jASqEt644m*KNERKGtvN1fOThTuClFYFTK3bQXCsFAMizmJY1Dm5G426TpB6z3R8pE9cPIg2moMocbHhajQ7Fj7pI1RkAWWTedF65UTDxNc!/b&bo=1wSHAgAAAAADB3Q!&rf=viewer_4" alt></p>
-</blockquote>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -4269,7 +4438,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -4291,7 +4460,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

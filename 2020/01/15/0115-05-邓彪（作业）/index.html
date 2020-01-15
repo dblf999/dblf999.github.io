@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="更新日期：2020&#x2F;01&#x2F;15  Bandit wargame 0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220   0-1.下一关的密码藏在readme文件中，直接使用cat命令查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="0115-05-邓彪（日报）">
+<meta property="og:url" content="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/index.html">
+<meta property="og:site_name" content="yibai的空间">
+<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;15  Bandit wargame 0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220   0-1.下一关的密码藏在readme文件中，直接使用cat命令查看">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1XcT17DSEAiVJ4q8*YCM7lE9rWmD1K7gQPC0inAbTuQHUCFeja5YJ6FfkERCtc2o*FNscGQn58lOtK5JxsBet6Q!/b&bo=xgN3AQAAAAADF4E!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1eCHmATsfx73teJ*Huio4YG6arfvwdUdlmvnvCBCNVyGVicy33wsftVnvmv3vox75zE0Z8hf7lK56ZVCvxqx5ng!/b&bo=mAG0AAAAAAADFx8!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ShkKhjfFZ3KEYWrRo6cWactBUUAI2JrhsdVCu6NXSTaV8Nq3*6z*KLl65x5R*UQlvD5mVEQKvxOOWi31cTizcs!/b&bo=6AFwAAAAAAADF6s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YOlGFUcfnibMt94tgRk9iVtVhucJI89Go*Nu6mlZzld*.kmDtjFs.AU81.AjNt1TTQNtc0d9pdD15FpgGmZKNg!/b&bo=iQG2AAAAAAADFww!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ckZR4JZYLaYZrIyBLf1QqlKP0UEpFSZCQD*zH2WkFKaGTE*A4ElSbmNebUpCiPhFb.jEhFL.90lrs4zPFAKs*Y!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dpU9Kp40FKitML*NTeS2PSfekObhfhi9BR8kcpMrvNgiyvb9oGEVXTY5f*zP5RQOUJLwsyD9IlNTMY9GMft1WY!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1WBQw3kMHYzZmtbwSfd1FrEICAA6UVQvD2mS5l81nZE2Jv91Y5ELbseHPsLAG.XyQC4wP.MwZeVtjeu1Rfm6ASE!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1cFSSh6uX2e7dMBkEL.mD6ArFX0nHFWSLe34gMxFJNEH2HiANCD5dqj.SV0Z8e3oN2UJAFS9deq7UocLo33XeL8!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dARQ6KZnjnLRNg0Wl0oeHNFZjov0FsdsrtD6zn*xvdwtwFd18XZxI7M8QpQFC9QCiyuRcfa6qKqkUBu1FJIqLc!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YocUYxq2FA17M2r26NSvEIn81cg2cVq*dO1Hvr9naXTBsLK4Vz2fDZ6KsANUeR4v7abXCTVgNmChRKR2J83z2A!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1VUtEI5GyGfBqRm3DRwqRZBfQAHjsCZ5L30IMdf649RROnANQUQaU3eQpCXrFksK0gpBz3d5kWnh5qOeNhRh6j0!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1fzOCd6fIbZPqh4HSoO3oQy9tX7YxlSsD9MAoaFMzYJQZ2iL3oARC3Me*7*U38W8m.7Eyvvz01pPeI3.S6fhsrY!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dB55TG1DJC09ZHo6kfsx6dlI7j4SlqDdy*HFOSSVzSWwNb5Cd.TvgHHIlOHIRhtMDzjKIXN1j.4Y47dOPWlb9k!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Y.M.ZDXY8374*2kAV9.rpestzhqieG38CPFM9Yy9RNc.4BC.EDard28gBBuWJcv4LUBnAf6hcuCxtAWhqsFqQk!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q4dLjKz4kO1ShINA8hV9vHylcRYvYKxa9T2F.wtCPD.c6VGt3RWAoh6P6hw5wAKpW.Lmpt9H1mx9H9TyFkwnJI!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q77UAcxgLQscmc1xdQyyFoyHIfvB0lgvavpM.IMoQG1PSS1nGTN7slBZMiU46xSOSr1WQ*PA2X7KhW0JfSLLo8!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1S1fWUQdSGb*GerBYAGfJJmt5Yjz*hpy4vFBbubxw9WslFHLve.frLn3E5g.ViwUC9Mj9MSV*4GGkCfuYSfOloA!/b&bo=HANYAgAAAAADB2c!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1R*tZhVz6u8dFBrBZJRD.Bpzq.vXpCRTfwTn.ULs98b6JH0vA4rBGZiqxn4Xe26M.8UnEkYT4Zg.ZJwaJhv0C4U!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
+<meta property="article:published_time" content="2020-01-15T13:52:36.042Z">
+<meta property="article:modified_time" content="2020-01-15T17:46:06.848Z">
+<meta property="article:author" content="yibai">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/01/15/0115-05-邓彪（作业）/"/>
+
+
+
+
+
+  <title>0115-05-邓彪（日报） | yibai的空间</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">yibai的空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">0115-05-邓彪（日报）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-15T21:52:36+08:00">
+                2020-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%97%A5%E6%8A%A5/" itemprop="url" rel="index">
+                    <span itemprop="name">日报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>更新日期：2020/01/15</p>
+</blockquote>
+<h2 id="Bandit-wargame"><a href="#Bandit-wargame" class="headerlink" title="Bandit wargame"></a>Bandit wargame</h2><blockquote>
+<p>0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0<br>命令为：ssh <a href="mailto:bandit0@bandit.labs.overthewire.org">bandit0@bandit.labs.overthewire.org</a> -p 2220<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>0-1.下一关的密码藏在readme文件中，直接使用cat命令查看<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1XcT17DSEAiVJ4q8*YCM7lE9rWmD1K7gQPC0inAbTuQHUCFeja5YJ6FfkERCtc2o*FNscGQn58lOtK5JxsBet6Q!/b&bo=xgN3AQAAAAADF4E!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>1-2.利用0-1得到的密码连接到本关的主机，发现第三关的密码藏在“-”中，“-”在linux中是有特殊意义的，如果直接使用cat查看的话无法读取，所以使用“./-”来表明是作为路径查看的。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1eCHmATsfx73teJ*Huio4YG6arfvwdUdlmvnvCBCNVyGVicy33wsftVnvmv3vox75zE0Z8hf7lK56ZVCvxqx5ng!/b&bo=mAG0AAAAAAADFx8!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>2-3.利用1-2得到的密码连接到本关的主机，发现下一级别的密码存储在主目录中此文件名中称为空格的文件中，这道题文件名中有空格，可以用双引号把文件名包裹起来<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ShkKhjfFZ3KEYWrRo6cWactBUUAI2JrhsdVCu6NXSTaV8Nq3*6z*KLl65x5R*UQlvD5mVEQKvxOOWi31cTizcs!/b&bo=6AFwAAAAAAADF6s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>3-4.利用2-3得到的密码连接到本关的主机,下一级别的密码存储在inhere目录中的隐藏文件中,在linux中，文件名前面有.的就是隐藏文件，可以使用ls -a来显示<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YOlGFUcfnibMt94tgRk9iVtVhucJI89Go*Nu6mlZzld*.kmDtjFs.AU81.AjNt1TTQNtc0d9pdD15FpgGmZKNg!/b&bo=iQG2AAAAAAADFww!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>4-5.利用3-4得到的密码连接到本关的主机,下一关的密码保存在inhere文件夹下唯一可读的文件中,使用 file 命令可以查看所有文件的文件类型,我个人觉得可以挨个打开一遍也能找得到密码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ckZR4JZYLaYZrIyBLf1QqlKP0UEpFSZCQD*zH2WkFKaGTE*A4ElSbmNebUpCiPhFb.jEhFL.90lrs4zPFAKs*Y!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>5-6.利用4-5得到的密码连接到本关的主机,这关是在inhere目录下找到一个可读，大小为1033字节且不可执行的文件，用到 find 命令。参数 -size 可以用来指定文件的大小，在数字后加 ‘c’用字节表示，加’k’用 kb 表示，加’M’用 MB 表示。参数 -type 用来指定文件的类型，’f’表示普通文件，’I’表示链接文件，’d’表示目录。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dpU9Kp40FKitML*NTeS2PSfekObhfhi9BR8kcpMrvNgiyvb9oGEVXTY5f*zP5RQOUJLwsyD9IlNTMY9GMft1WY!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>6-7.利用5-6得到的密码连接到本关的主机,这一关的文件有以下特征：属于用户 bandit7；属于组 bandit6,33字节,find命令, -group bandit6 将会寻找属于组 bandit6 的文件。参数 -user bandit7 将会寻找属于用户 bandit7 的文件。因为该文件在服务器的某处，所以我们要从根目录开始找。执行命令后将会产生许多拒绝访问的报错信息。为了过滤掉这些没用的信息，我们使用 （2&gt;/dev/null）<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1WBQw3kMHYzZmtbwSfd1FrEICAA6UVQvD2mS5l81nZE2Jv91Y5ELbseHPsLAG.XyQC4wP.MwZeVtjeu1Rfm6ASE!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>7-8.利用6-7得到的密码连接到本关的主机,题目说密码在data.txt中并且在单词millionth的后面，可以grep “millionth” data.txt或者cat data.txt|grep millionth<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1cFSSh6uX2e7dMBkEL.mD6ArFX0nHFWSLe34gMxFJNEH2HiANCD5dqj.SV0Z8e3oN2UJAFS9deq7UocLo33XeL8!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>8-9.利用7-8得到的密码连接到本关的主机,下一关的密码保存在文件 data.txt中并且仅有一行只出现一次，uniq -u仅显示出一次的行列，但是使用之前需要用sort命令对文本进行排序，因为uniq命令是通过判断上下两行是否一样来判断的，所以用sort排序一下然后在uniq就能找到唯一出现的那一行了<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dARQ6KZnjnLRNg0Wl0oeHNFZjov0FsdsrtD6zn*xvdwtwFd18XZxI7M8QpQFC9QCiyuRcfa6qKqkUBu1FJIqLc!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>9-10.利用8-9得到的密码连接到本关的主机,下一关的密码保存在 data.txt 文件中，只有少部分以’=’ 开头的字符串是可读的，用cat命令之后会出现很多乱码，因此需要使用strings命令，获取可打印的字符。使用：strings data.txt<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YocUYxq2FA17M2r26NSvEIn81cg2cVq*dO1Hvr9naXTBsLK4Vz2fDZ6KsANUeR4v7abXCTVgNmChRKR2J83z2A!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>10-11.利用9-10得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件包含base64编码的数据，利用base64 -d直接解码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1VUtEI5GyGfBqRm3DRwqRZBfQAHjsCZ5L30IMdf649RROnANQUQaU3eQpCXrFksK0gpBz3d5kWnh5qOeNhRh6j0!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>11-12.利用10-11得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，其中所有小写（az）和大写（AZ）字母都已旋转了13个位置，就相当去26个字母的前13个位置与后13个位置调换了。那么我们就是用tr命令进行调换，cat data.txt | tr ‘a-zA-Z’ ‘n-za-mN-ZA-M’<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1fzOCd6fIbZPqh4HSoO3oQy9tX7YxlSsD9MAoaFMzYJQZ2iL3oARC3Me*7*U38W8m.7Eyvvz01pPeI3.S6fhsrY!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>12-13.利用11-12得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件是已重复压缩的文件。对于此级别，在/ tmp下创建一个目录，在其中可以使用mkdir进行工作可能很有用。例如：mkdir / tmp / myname123。然后使用cp复制数据文件，然后使用mv重命名该数据文件。首先按照提示，在/tmp目录下创建自定义的文件夹，然后我们发现data.txt是一个hex dump文件，里面是十六进制的内容，可以用xxd命令将其转换成二进制文件，然后用file命令看一下这个二进制是什么文件，发现是一个gzip压缩文件，那么利用mv命令把文件重命名，然后用gzip -d命令解压，发现还是一个二进制文件，继续file命令查看，不断重复，最后得到密码。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dB55TG1DJC09ZHo6kfsx6dlI7j4SlqDdy*HFOSSVzSWwNb5Cd.TvgHHIlOHIRhtMDzjKIXN1j.4Y47dOPWlb9k!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Y.M.ZDXY8374*2kAV9.rpestzhqieG38CPFM9Yy9RNc.4BC.EDard28gBBuWJcv4LUBnAf6hcuCxtAWhqsFqQk!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>13-14.利用12-13得到的密码连接到本关的主机,下一级别的密码存储在/etc/bandit_pass/bandit14中，并且只能由bandit14用户读取。对于此级别，您不会获得下一个密码，但是会获得一个可用于登录下一级别的专用SSH密钥。这道题我们使用bandit13用户登陆的，但是题目说需要我们用bandit14用户登陆才能查看密码，并且给了我们ssh的私钥，那么我们就可以利用ssh -i参数指定私钥进行登陆：ssh -i sshkey.private bandit14@localhost，再用cat打开/etc/bandit_pass/bandit14即可。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q4dLjKz4kO1ShINA8hV9vHylcRYvYKxa9T2F.wtCPD.c6VGt3RWAoh6P6hw5wAKpW.Lmpt9H1mx9H9TyFkwnJI!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>14-15.上一题已经连接到本题主机，可以通过将当前级别的密码提交到localhost上的端口30000来检索下一级的密码，用telnet连接到本地的30000端口上，然后把这关的密码发送过去。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q77UAcxgLQscmc1xdQyyFoyHIfvB0lgvavpM.IMoQG1PSS1nGTN7slBZMiU46xSOSr1WQ*PA2X7KhW0JfSLLo8!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>15-16.利用14-15得到的密码连接到本关的主机,可以通过使用SSL加密将当前级别的密码提交到localhost上的端口30001来检索下一级别的密码，openssl s_client -connect localhost:30001<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1S1fWUQdSGb*GerBYAGfJJmt5Yjz*hpy4vFBbubxw9WslFHLve.frLn3E5g.ViwUC9Mj9MSV*4GGkCfuYSfOloA!/b&bo=HANYAgAAAAADB2c!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>16-17.利用15-16得到的密码连接到本关的主机,可以通过将当前级别的密码提交到本地主机上31000到32000范围内的端口上的密码来检索下一级的凭据。首先找出这些端口中的哪些服务器正在侦听它们。然后找出其中哪些使用SSL，哪些不使用SSL。只有一台服务器将提供下一个凭据，题目中提示了nmap，直接用nmap扫描端口，nmap -p 31000-32000 localhost，发现两个端口，用openssl s_client -connect localhost:检查两个端口号，发现31790是我们需要的，另外，我们可以写一个脚本，创建一个 /tmp/key 文件夹并将密钥保存在这：cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet &gt; /tmp/key/b16pkey，然后登陆：ssh -i /tmp/key/b16pkey bandit17@localhost，用cat打开：cat /etc/bandit_pass/bandit17<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1R*tZhVz6u8dFBrBZJRD.Bpzq.vXpCRTfwTn.ULs98b6JH0vA4rBGZiqxn4Xe26M.8UnEkYT4Zg.ZJwaJhv0C4U!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h2><blockquote>
+<p>开关机命令</p>
+<blockquote>
+<p>1、shutdown –h now：立刻进行关机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、shutdown –r now：现在重新启动计算机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、reboot：现在重新启动计算机</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、su -：切换用户；passwd：修改用户密码</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、logout：用户注销</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>常用快捷命令</p>
+<blockquote>
+<p>1、tab = 补全</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、ctrl + l -：清屏，类似clear命令</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、ctrl + r -：查找历史命令（history）；ctrl+c = 终止</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、ctrl+k = 删除此处至末尾所有内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、ctrl+u = 删除此处至开始所有内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>展示目录列表命令ls（list）</p>
+<blockquote>
+<p>1、ls    展示当前目录下的可见文件</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、ls -a   展示当前目录下所有的文件（包括隐藏的文件）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、ls -l(ll)   展示当前目录下文件的详细信息</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、ll -a    展示当前目录下所有文件的详细信息</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、ll -h   友好的显示当前目录下文件的详细信息（其实就是文件的大小可读性更强了）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>切换目录命令cd（change directory）</p>
+<blockquote>
+<p>1、cd test    切换到test目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、cd .. 切换到上一级目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、cd / 切换到系统根目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4、cd ~ 切换到当前用户的根目录下</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5、cd - 切换到上一级所在的目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>目录的创建（mkdir）和删除（rmdir）命令</p>
+<blockquote>
+<p>1、mkdir test 在当前目录下创建一个test目录</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2、mkdir -p test/a/b 在test目录下的a目录下创建一个b目录，如果上一级目录不存在，则连它的父目录一起创建</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3、rmdir test 删除当前目录下的test目录（注意：该命令只能够删除空目录）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>文件打包或解压命令tar</p>
+<blockquote>
+<p>Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的,而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz。</p>
+<blockquote>
+<p>tar -zcvf 打包压缩后的文件名 要打包压缩的文件</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>tar [-xvf] 压缩文件</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>端口管理</p>
+</blockquote>
+<blockquote>
+<p>nststat:查看端口开放情况</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-a:表示列举所有的连接、服务器监听</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-t:列出所有tcp协议的服务</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-u:列出所有udp协议的服务</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-n:使用端口号来显示</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-l:列出所有的监听</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>-p:列出所有服务的进程id（pid）</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>常用：netstat -atunlp</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>进程管理：ps</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>ps:查当前进程</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>ps -ef | grep java:查看java的进程</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>jps:==(ps -ef | grep java) 只有在linux中安装了JDK才能用</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>网络管理：ping、ifconfig</p>
+</blockquote>
+<blockquote>
+<p>服务管理命令：</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>service:            </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>格式：<br>service s_name start|stop|status|restart</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>linux系统所有自带服务名称：/etc/init.d/</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>常用：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>关闭防火墙服务<br>:service iptables stop</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>重启网络服务：<br>service network restart</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>mysql数据库服务的名称：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>mysql版本低于5.5  mysqld</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>mysql版本高于5.5  mysql</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>more</p>
+<blockquote>
+<p>在 more 这个程序的运行过程中，你有几个按键可以按的：</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>空白键 (space)：代表向下翻一页</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Enter         ：代表向下翻『一行』</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>/字串         ：代表在这个显示的内容当中，向下搜寻『字串』这个关键字</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>:f            ：立刻显示出档名以及目前显示的行数</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>q             ：代表立刻离开 more ，不再显示该文件内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管线无用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" rel="next" title="0115-05-邓彪（日报）">
+                <i class="fa fa-chevron-left"></i> 0115-05-邓彪（日报）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yibai</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bandit-wargame"><span class="nav-number">1.</span> <span class="nav-text">Bandit wargame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux常用命令"><span class="nav-number">2.</span> <span class="nav-text">Linux常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yibai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
