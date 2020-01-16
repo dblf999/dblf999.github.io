@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="linux,sql," />
 
 
 
@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="更新日期：2020&#x2F;01&#x2F;15  Bandit wargame 0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220   0-1.下一关的密码藏在readme文件中，直接使用cat命令查看">
+<meta name="description" content="更新日期：2020&#x2F;01&#x2F;16  Bandit wargame0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220 0-1.下一关的密码藏在readme文件中，直接使用cat命令查看 1-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0115-05-邓彪（作业）">
-<meta property="og:url" content="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/index.html">
+<meta property="og:title" content="0116-05-邓彪（作业）">
+<meta property="og:url" content="http://yoursite.com/2020/01/16/0116-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/index.html">
 <meta property="og:site_name" content="yibai的空间">
-<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;15  Bandit wargame 0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220   0-1.下一关的密码藏在readme文件中，直接使用cat命令查看">
+<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;16  Bandit wargame0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0命令为：ssh bandit0@bandit.labs.overthewire.org -p 2220 0-1.下一关的密码藏在readme文件中，直接使用cat命令查看 1-">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1XcT17DSEAiVJ4q8*YCM7lE9rWmD1K7gQPC0inAbTuQHUCFeja5YJ6FfkERCtc2o*FNscGQn58lOtK5JxsBet6Q!/b&bo=xgN3AQAAAAADF4E!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1eCHmATsfx73teJ*Huio4YG6arfvwdUdlmvnvCBCNVyGVicy33wsftVnvmv3vox75zE0Z8hf7lK56ZVCvxqx5ng!/b&bo=mAG0AAAAAAADFx8!&rf=viewer_4">
@@ -104,10 +104,30 @@
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q77UAcxgLQscmc1xdQyyFoyHIfvB0lgvavpM.IMoQG1PSS1nGTN7slBZMiU46xSOSr1WQ*PA2X7KhW0JfSLLo8!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1S1fWUQdSGb*GerBYAGfJJmt5Yjz*hpy4vFBbubxw9WslFHLve.frLn3E5g.ViwUC9Mj9MSV*4GGkCfuYSfOloA!/b&bo=HANYAgAAAAADB2c!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1R*tZhVz6u8dFBrBZJRD.Bpzq.vXpCRTfwTn.ULs98b6JH0vA4rBGZiqxn4Xe26M.8UnEkYT4Zg.ZJwaJhv0C4U!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4">
-<meta property="article:published_time" content="2020-01-15T13:52:36.042Z">
-<meta property="article:modified_time" content="2020-01-15T17:51:40.071Z">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1TZ044JM9yb.a9d*QCeQOWuPvPG3ptkYaCu1z50VWbsa*lrZHbsY5AjoihEgS6ySa*yEn0EIyj4PtJAum9ehVys!/b&bo=egNYAgAAAAADBwE!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Vky1xP.1qHyok8j*H4ithbmaudiR4NjMmItxbInMN.S9s33uwFoF0GorjxRgs56eWHS6MfSwOm7zMPs7scUQNM!/b&bo=egNYAgAAAAADBwE!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1QnQ*qwNyw*2UHeDgvbZAiH5pG1VubtRXycMmc.x.wlmYjnSYRkgvziJ0nIcNMMJB136CROn0qS97pBd0RK*2y0!/b&bo=EQO*AAAAAAADB48!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1WOzqS5Fqzc09CIAUPasOhGx8v0eI1nTZJLQlRJ0rU5EuOQrCJlNtUgGnPD1kFlJyyNASUoag8qtJ4TXObgQ2P8!/b&bo=LQNYAgAAAAADB1Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VeVusl*rdsIemlDNlieu*P4Q8xys7kpdWrvQARyNtvuWX8H2hnlbicCdL2mxi.y7pj1KSf0j*M4TSIqUOcIERs!/b&bo=UQNfAgAAAAADBy0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1efnq3tt9vhcM3vIUW0YdHMYfsMK43.WTTsp0Wk0Fkjsj4AL2zklxD6CjE.ff7lupj7mmOJ0k.6RSI0IadgtuPE!/b&bo=QAS7AQAAAAADB9w!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1XfT*MlHcxSbM2LUiQcihxoKK3Vc8bOvMmmx0Xku0jqxAUI18L2TLnus*bZVe7uOKcALFf5l2q2aDnTymvidE08!/b&bo=PgSCAgAAAAADB5g!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1T32nz0CorjOsFLorJegsNNd*qNPuloozok5eYyfFUGZ48QyTVicp5YfTlfVDdy5l7QIgYT6ba0bIwzhyJO3Z00!/b&bo=XQOIAgAAAAADB*Y!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VeouXu2F6bWa3xnfHd94MMuYBD.Oq5aoE23JkehhnowUXk.n1ynjYVsFS9N9mKi7Sfp4oIxwqdESWT8w2Uh3Pc!/b&bo=IwQaAgAAAAADBx0!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1cVyaocgQ*Kav.Hz5tJolAMgMWJXv*NVs7c3yY4nnNOfmX*lYO1FCx8Zz0e4qD33N50MStyFsKN0r54FW.xldN0!/b&bo=bAT2AgAAAAADB74!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1fv.1GvBnICQK9C5tskmAUwPwUM4XUudFYr.gZd0WJwt9gYedqBYH5sQ9ZHLxifqjaJWCT4Jburnu6udHdvP5n8!/b&bo=5QLPAQAAAAADBws!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Yo3xLY9KleqWgerkcsBpVZbGVlpbmy9MvWcNmtvNySqFRxA04vuv9qdsxKr.yNNzKlv6J27Imjxt9wkAk6GosM!/b&bo=kQMbAgAAAAADB6k!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Yz7tGZo.UgaZsHQIAWq5FtelF*prbd3A4RL*ZY7C7raF5yZhFiTfxpfkjtEgJk0P.oxJYJsWff3HYX2n9t5XF4!/b&bo=1AJjAgAAAAADB5U!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1ViYHbxUBW.RFkSfSvLwIPCp6tC*XLBiHsWrET0MAt0wwQ.OGYFCyhvu9ew4rJBY5m.ETD.KFE*H1UWDbhg8seA!/b&bo=QAYgAwAAAAADB0c!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VJX.J8b4ts689UmuGiZCnyIkH4vbTZOphv*dajsuMgLYfrHYfzFVgAyeEIM23aNzSX845zB1DvQEOuhycnSFHk!/b&bo=yQI6AQAAAAADB9I!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1YbVXPKxiUU9aBzCH1IPaGL5ZVgEiaeXNCDyxBqogpKjv*ecwoEVvvyzOBaDIk42.*.GAAwoSWRSYydfiixvVX0!/b&bo=oQPYAQAAAAADB1k!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1RRtTsDv3uEvAwQKaUoYBJdub.5o2gG0mulxy0H38D0AQmm88bh*BtTk*s28qyYIne3rATSzUexbu*0zLi*1ROM!/b&bo=qgOIAQAAAAADBwI!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1TdLKE9UdvcyV.ycNNcdTlxPkl4rif.TfLK4V23lmsB0X28merz7PyMSBHB64S2KtNk6RJ5.lggV*yiDkwaTGkA!/b&bo=iQN5AQAAAAADB9A!&rf=viewer_4">
+<meta property="og:image" content="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1dyGOGGWrAf0JsYg1Xj*8lKrXxYQd3vRGPX4eTHNCZvNHLKFquCac9Drp7MAHUHCXz1rm.Vb9L.TxTorFUxhZMo!/b&bo=KwNMAQAAAAADB0c!&rf=viewer_4">
+<meta property="article:published_time" content="2020-01-16T12:56:19.694Z">
+<meta property="article:modified_time" content="2020-01-16T16:11:25.669Z">
 <meta property="article:author" content="yibai">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4">
 
@@ -139,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/15/0115-05-邓彪（作业）/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/16/0116-05-邓彪（作业）/"/>
 
 
 
 
 
-  <title>0115-05-邓彪（作业） | yibai的空间</title>
+  <title>0116-05-邓彪（作业） | yibai的空间</title>
   
 
 
@@ -282,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/16/0116-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yibai">
@@ -299,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">0115-05-邓彪（作业）</h1>
+          <h1 class="post-title" itemprop="name headline">0116-05-邓彪（作业）</h1>
         
 
         <div class="post-meta">
@@ -311,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-15T21:52:36+08:00">
-                2020-01-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-16T20:56:19+08:00">
+                2020-01-16
               </time>
             
 
@@ -372,62 +392,32 @@
 
       
         <blockquote>
-<p>更新日期：2020/01/15</p>
+<p>更新日期：2020/01/16</p>
 </blockquote>
-<h2 id="Bandit-wargame"><a href="#Bandit-wargame" class="headerlink" title="Bandit wargame"></a>Bandit wargame</h2><blockquote>
-<p>0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0<br>命令为：ssh <a href="mailto:bandit0@bandit.labs.overthewire.org">bandit0@bandit.labs.overthewire.org</a> -p 2220<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
+<h2 id="Bandit-wargame"><a href="#Bandit-wargame" class="headerlink" title="Bandit wargame"></a>Bandit wargame</h2><p>0.第一关根据题目提示利用ssh连接到主机 bandit.labs.overthewire.org，在端口2220的用户名是bandit0，密码为bandit0<br>命令为：ssh <a href="mailto:bandit0@bandit.labs.overthewire.org">bandit0@bandit.labs.overthewire.org</a> -p 2220<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1QRe2PVzj8Aa.gNSh9uye46dNyNUzdxr1CM*n*JJIddOoUJAPQ9sHLuJuX8dGRB8PS6uMtfWNZZguRcm0uhm6oA!/b&bo=awGGAAAAAAADB84!&rf=viewer_4" alt></p>
 <p>0-1.下一关的密码藏在readme文件中，直接使用cat命令查看<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1XcT17DSEAiVJ4q8*YCM7lE9rWmD1K7gQPC0inAbTuQHUCFeja5YJ6FfkERCtc2o*FNscGQn58lOtK5JxsBet6Q!/b&bo=xgN3AQAAAAADF4E!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>1-2.利用0-1得到的密码连接到本关的主机，发现第三关的密码藏在“-”中，“-”在linux中是有特殊意义的，如果直接使用cat查看的话无法读取，所以使用“./-”来表明是作为路径查看的。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1eCHmATsfx73teJ*Huio4YG6arfvwdUdlmvnvCBCNVyGVicy33wsftVnvmv3vox75zE0Z8hf7lK56ZVCvxqx5ng!/b&bo=mAG0AAAAAAADFx8!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>2-3.利用1-2得到的密码连接到本关的主机，发现下一级别的密码存储在主目录中此文件名中称为空格的文件中，这道题文件名中有空格，可以用双引号把文件名包裹起来<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ShkKhjfFZ3KEYWrRo6cWactBUUAI2JrhsdVCu6NXSTaV8Nq3*6z*KLl65x5R*UQlvD5mVEQKvxOOWi31cTizcs!/b&bo=6AFwAAAAAAADF6s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>3-4.利用2-3得到的密码连接到本关的主机,下一级别的密码存储在inhere目录中的隐藏文件中,在linux中，文件名前面有.的就是隐藏文件，可以使用ls -a来显示<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YOlGFUcfnibMt94tgRk9iVtVhucJI89Go*Nu6mlZzld*.kmDtjFs.AU81.AjNt1TTQNtc0d9pdD15FpgGmZKNg!/b&bo=iQG2AAAAAAADFww!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>4-5.利用3-4得到的密码连接到本关的主机,下一关的密码保存在inhere文件夹下唯一可读的文件中,使用 file 命令可以查看所有文件的文件类型,我个人觉得可以挨个打开一遍也能找得到密码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1ckZR4JZYLaYZrIyBLf1QqlKP0UEpFSZCQD*zH2WkFKaGTE*A4ElSbmNebUpCiPhFb.jEhFL.90lrs4zPFAKs*Y!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>5-6.利用4-5得到的密码连接到本关的主机,这关是在inhere目录下找到一个可读，大小为1033字节且不可执行的文件，用到 find 命令。参数 -size 可以用来指定文件的大小，在数字后加 ‘c’用字节表示，加’k’用 kb 表示，加’M’用 MB 表示。参数 -type 用来指定文件的类型，’f’表示普通文件，’I’表示链接文件，’d’表示目录。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dpU9Kp40FKitML*NTeS2PSfekObhfhi9BR8kcpMrvNgiyvb9oGEVXTY5f*zP5RQOUJLwsyD9IlNTMY9GMft1WY!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>6-7.利用5-6得到的密码连接到本关的主机,这一关的文件有以下特征：属于用户 bandit7；属于组 bandit6,33字节,find命令, -group bandit6 将会寻找属于组 bandit6 的文件。参数 -user bandit7 将会寻找属于用户 bandit7 的文件。因为该文件在服务器的某处，所以我们要从根目录开始找。执行命令后将会产生许多拒绝访问的报错信息。为了过滤掉这些没用的信息，我们使用 （2&gt;/dev/null）<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1WBQw3kMHYzZmtbwSfd1FrEICAA6UVQvD2mS5l81nZE2Jv91Y5ELbseHPsLAG.XyQC4wP.MwZeVtjeu1Rfm6ASE!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>7-8.利用6-7得到的密码连接到本关的主机,题目说密码在data.txt中并且在单词millionth的后面，可以grep “millionth” data.txt或者cat data.txt|grep millionth<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1cFSSh6uX2e7dMBkEL.mD6ArFX0nHFWSLe34gMxFJNEH2HiANCD5dqj.SV0Z8e3oN2UJAFS9deq7UocLo33XeL8!/b&bo=IANYAgAAAAADN2s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>8-9.利用7-8得到的密码连接到本关的主机,下一关的密码保存在文件 data.txt中并且仅有一行只出现一次，uniq -u仅显示出一次的行列，但是使用之前需要用sort命令对文本进行排序，因为uniq命令是通过判断上下两行是否一样来判断的，所以用sort排序一下然后在uniq就能找到唯一出现的那一行了<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dARQ6KZnjnLRNg0Wl0oeHNFZjov0FsdsrtD6zn*xvdwtwFd18XZxI7M8QpQFC9QCiyuRcfa6qKqkUBu1FJIqLc!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>9-10.利用8-9得到的密码连接到本关的主机,下一关的密码保存在 data.txt 文件中，只有少部分以’=’ 开头的字符串是可读的，用cat命令之后会出现很多乱码，因此需要使用strings命令，获取可打印的字符。使用：strings data.txt<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1YocUYxq2FA17M2r26NSvEIn81cg2cVq*dO1Hvr9naXTBsLK4Vz2fDZ6KsANUeR4v7abXCTVgNmChRKR2J83z2A!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>10-11.利用9-10得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件包含base64编码的数据，利用base64 -d直接解码<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1VUtEI5GyGfBqRm3DRwqRZBfQAHjsCZ5L30IMdf649RROnANQUQaU3eQpCXrFksK0gpBz3d5kWnh5qOeNhRh6j0!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>11-12.利用10-11得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，其中所有小写（az）和大写（AZ）字母都已旋转了13个位置，就相当去26个字母的前13个位置与后13个位置调换了。那么我们就是用tr命令进行调换，cat data.txt | tr ‘a-zA-Z’ ‘n-za-mN-ZA-M’<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1fzOCd6fIbZPqh4HSoO3oQy9tX7YxlSsD9MAoaFMzYJQZ2iL3oARC3Me*7*U38W8m.7Eyvvz01pPeI3.S6fhsrY!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>12-13.利用11-12得到的密码连接到本关的主机,下一级别的密码存储在文件data.txt中，该文件是已重复压缩的文件。对于此级别，在/ tmp下创建一个目录，在其中可以使用mkdir进行工作可能很有用。例如：mkdir / tmp / myname123。然后使用cp复制数据文件，然后使用mv重命名该数据文件。首先按照提示，在/tmp目录下创建自定义的文件夹，然后我们发现data.txt是一个hex dump文件，里面是十六进制的内容，可以用xxd命令将其转换成二进制文件，然后用file命令看一下这个二进制是什么文件，发现是一个gzip压缩文件，那么利用mv命令把文件重命名，然后用gzip -d命令解压，发现还是一个二进制文件，继续file命令查看，不断重复，最后得到密码。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1dB55TG1DJC09ZHo6kfsx6dlI7j4SlqDdy*HFOSSVzSWwNb5Cd.TvgHHIlOHIRhtMDzjKIXN1j.4Y47dOPWlb9k!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt><br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Y.M.ZDXY8374*2kAV9.rpestzhqieG38CPFM9Yy9RNc.4BC.EDard28gBBuWJcv4LUBnAf6hcuCxtAWhqsFqQk!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>13-14.利用12-13得到的密码连接到本关的主机,下一级别的密码存储在/etc/bandit_pass/bandit14中，并且只能由bandit14用户读取。对于此级别，您不会获得下一个密码，但是会获得一个可用于登录下一级别的专用SSH密钥。这道题我们使用bandit13用户登陆的，但是题目说需要我们用bandit14用户登陆才能查看密码，并且给了我们ssh的私钥，那么我们就可以利用ssh -i参数指定私钥进行登陆：ssh -i sshkey.private bandit14@localhost，再用cat打开/etc/bandit_pass/bandit14即可。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q4dLjKz4kO1ShINA8hV9vHylcRYvYKxa9T2F.wtCPD.c6VGt3RWAoh6P6hw5wAKpW.Lmpt9H1mx9H9TyFkwnJI!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>14-15.上一题已经连接到本题主机，可以通过将当前级别的密码提交到localhost上的端口30000来检索下一级的密码，用telnet连接到本地的30000端口上，然后把这关的密码发送过去。<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1Q77UAcxgLQscmc1xdQyyFoyHIfvB0lgvavpM.IMoQG1PSS1nGTN7slBZMiU46xSOSr1WQ*PA2X7KhW0JfSLLo8!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>15-16.利用14-15得到的密码连接到本关的主机,可以通过使用SSL加密将当前级别的密码提交到localhost上的端口30001来检索下一级别的密码，openssl s_client -connect localhost:30001<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1S1fWUQdSGb*GerBYAGfJJmt5Yjz*hpy4vFBbubxw9WslFHLve.frLn3E5g.ViwUC9Mj9MSV*4GGkCfuYSfOloA!/b&bo=HANYAgAAAAADB2c!&rf=viewer_4" alt></p>
-</blockquote>
-<blockquote>
 <p>16-17.利用15-16得到的密码连接到本关的主机,可以通过将当前级别的密码提交到本地主机上31000到32000范围内的端口上的密码来检索下一级的凭据。首先找出这些端口中的哪些服务器正在侦听它们。然后找出其中哪些使用SSL，哪些不使用SSL。只有一台服务器将提供下一个凭据，题目中提示了nmap，直接用nmap扫描端口，nmap -p 31000-32000 localhost，发现两个端口，用openssl s_client -connect localhost:检查两个端口号，发现31790是我们需要的，另外，我们可以写一个脚本，创建一个 /tmp/key 文件夹并将密钥保存在这：cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet &gt; /tmp/key/b16pkey，然后登陆：ssh -i /tmp/key/b16pkey bandit17@localhost，用cat打开：cat /etc/bandit_pass/bandit17<br><img src="http://m.qpic.cn/psc?/V14DGvXv0Sv5ww/jASqEt644m*KNERKGtvN1R*tZhVz6u8dFBrBZJRD.Bpzq.vXpCRTfwTn.ULs98b6JH0vA4rBGZiqxn4Xe26M.8UnEkYT4Zg.ZJwaJhv0C4U!/b&bo=IANYAgAAAAADB1s!&rf=viewer_4" alt></p>
-</blockquote>
+<p>17-18.利用16-17得到的密码连接到本关的主机,主目录中有2个文件：passwords.old和passwords.new。下一级别的密码在 passwords.new中，并且是passwords.old和passwords.new之间唯一更改的行。diff 命令会输出两个文件中所有不同的行：<code>diff passwords.new passwords.old</code>。<br><img src alt><a href="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Ya.o7yG1VywhK5LA*1XhRlubIa0ZOcqBbhiM8UYTRVeQqd98g.WprHNg0CNAjypYxGikmZQSZi0BhaVGL9qOEs!/b&amp;bo=IANYAgAAAAADB1s!&amp;rf=viewer_4" target="_blank" rel="noopener">http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Ya.o7yG1VywhK5LA*1XhRlubIa0ZOcqBbhiM8UYTRVeQqd98g.WprHNg0CNAjypYxGikmZQSZi0BhaVGL9qOEs!/b&amp;bo=IANYAgAAAAADB1s!&amp;rf=viewer_4</a></p>
+<p>18-19.利用17-18得到的密码连接到本关的主机,正常登陆的话就发现直接断开了,们在ssh登陆的时候可以直接后面跟上命令，虽然被断开了，但是命令还是可以执行的，我们在后面加上cat readme，照常输入上一关的密码，下一关的密码就会显示出来的。<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1TZ044JM9yb.a9d*QCeQOWuPvPG3ptkYaCu1z50VWbsa*lrZHbsY5AjoihEgS6ySa*yEn0EIyj4PtJAum9ehVys!/b&bo=egNYAgAAAAADBwE!&rf=viewer_4" alt></p>
+<p>19-20.利用18-19得到的密码连接到本关的主机,为了进入下一关，你应该使用用户目录下的 setuid 二进制文件。在没有参数的情况下执行它来探索如何使用。在你正确使用了它后，下一关的密码可以在(/etc/bandit_pass)中找到，查看用户目录，我们可以看到由bandit20创建的 bandit20-do文件，可以被bandit19访问。该文件的权限设置是 rws。s 权限意味着当该文件被执行时，它会在所有者的权限下运行，因为所有者是 bandit20,我们可以尝试运行它，并使用提升的权限来查看下一关的密码。<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Vky1xP.1qHyok8j*H4ithbmaudiR4NjMmItxbInMN.S9s33uwFoF0GorjxRgs56eWHS6MfSwOm7zMPs7scUQNM!/b&bo=egNYAgAAAAADBwE!&rf=viewer_4" alt></p>
+<p>20-21.利用19-20得到的密码连接到本关的主机,主目录中有一个setuid二进制文件，它可以执行以下操作：它在您指定为命令行参数的端口上建立了与localhost的连接。然后，它从连接中读取一行文本，并将其与上一级密码（bandit20）进行比较。如果密码正确，它将传输下一级密码（bandit21），我们知道密码是存放在/etc/bandit_pass/bandit20这个文件中的，因此我们就在本地开启一个端口，并且把密码发送到这个端口，然后我们在用这个程序连接到这个端口中就可以成功了<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1QnQ*qwNyw*2UHeDgvbZAiH5pG1VubtRXycMmc.x.wlmYjnSYRkgvziJ0nIcNMMJB136CROn0qS97pBd0RK*2y0!/b&bo=EQO*AAAAAAADB48!&rf=viewer_4" alt></p>
+<p>21-22.利用20-21得到的密码连接到本关的主机,一个程序通过 cron 在规律的中断下自动运行，基于时间的作业调度。查看 /etc/cron.d 的配置来查看什么命令被执行了<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1WOzqS5Fqzc09CIAUPasOhGx8v0eI1nTZJLQlRJ0rU5EuOQrCJlNtUgGnPD1kFlJyyNASUoag8qtJ4TXObgQ2P8!/b&bo=LQNYAgAAAAADB1Y!&rf=viewer_4" alt></p>
+<p>22-23.利用21-22得到的密码连接到本关的主机,一个程序通过 cron 在规律的中断下自动运行，基于时间的作业调度。查看 /etc/cron.d 的配置来查看什么命令被执行了<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VeVusl*rdsIemlDNlieu*P4Q8xys7kpdWrvQARyNtvuWX8H2hnlbicCdL2mxi.y7pj1KSf0j*M4TSIqUOcIERs!/b&bo=UQNfAgAAAAADBy0!&rf=viewer_4" alt></p>
 <h2 id="Linux常用命令"><a href="#Linux常用命令" class="headerlink" title="Linux常用命令"></a>Linux常用命令</h2><blockquote>
 <p>开关机命令</p>
 <blockquote>
@@ -730,7 +720,49 @@
 </blockquote>
 </blockquote>
 </blockquote>
-
+<blockquote>
+<p>1.SHOW DATABASES<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1efnq3tt9vhcM3vIUW0YdHMYfsMK43.WTTsp0Wk0Fkjsj4AL2zklxD6CjE.ff7lupj7mmOJ0k.6RSI0IadgtuPE!/b&bo=QAS7AQAAAAADB9w!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>2.SHOW TABLES<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1XfT*MlHcxSbM2LUiQcihxoKK3Vc8bOvMmmx0Xku0jqxAUI18L2TLnus*bZVe7uOKcALFf5l2q2aDnTymvidE08!/b&bo=PgSCAgAAAAADB5g!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>3.SHOW COLUMNS FROM customers<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1T32nz0CorjOsFLorJegsNNd*qNPuloozok5eYyfFUGZ48QyTVicp5YfTlfVDdy5l7QIgYT6ba0bIwzhyJO3Z00!/b&bo=XQOIAgAAAAADB*Y!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>4.SELECT order_num FROM orders<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VeouXu2F6bWa3xnfHd94MMuYBD.Oq5aoE23JkehhnowUXk.n1ynjYVsFS9N9mKi7Sfp4oIxwqdESWT8w2Uh3Pc!/b&bo=IwQaAgAAAAADBx0!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>5.SELECT * FROM products<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1cVyaocgQ*Kav.Hz5tJolAMgMWJXv*NVs7c3yY4nnNOfmX*lYO1FCx8Zz0e4qD33N50MStyFsKN0r54FW.xldN0!/b&bo=bAT2AgAAAAADB74!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>6.SELECT DISTINCT vend_id FROM products<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1fv.1GvBnICQK9C5tskmAUwPwUM4XUudFYr.gZd0WJwt9gYedqBYH5sQ9ZHLxifqjaJWCT4Jburnu6udHdvP5n8!/b&bo=5QLPAQAAAAADBws!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>7.SELECT vend_id FROM products LIMIT 3<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Yo3xLY9KleqWgerkcsBpVZbGVlpbmy9MvWcNmtvNySqFRxA04vuv9qdsxKr.yNNzKlv6J27Imjxt9wkAk6GosM!/b&bo=kQMbAgAAAAADB6k!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>8.SELECT vend_id FROM products ORDER BY vend_id<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1Yz7tGZo.UgaZsHQIAWq5FtelF*prbd3A4RL*ZY7C7raF5yZhFiTfxpfkjtEgJk0P.oxJYJsWff3HYX2n9t5XF4!/b&bo=1AJjAgAAAAADB5U!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>9.SELECT vend_id FROM products ORDER BY vend_id DESC<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1ViYHbxUBW.RFkSfSvLwIPCp6tC*XLBiHsWrET0MAt0wwQ.OGYFCyhvu9ew4rJBY5m.ETD.KFE*H1UWDbhg8seA!/b&bo=QAYgAwAAAAADB0c!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>10.SELECT * FROM products WHERE vend_id=1005<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1VJX.J8b4ts689UmuGiZCnyIkH4vbTZOphv*dajsuMgLYfrHYfzFVgAyeEIM23aNzSX845zB1DvQEOuhycnSFHk!/b&bo=yQI6AQAAAAADB9I!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>11.SELECT prod_price,vend_id FROM products WHERE vend_id=1005<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1YbVXPKxiUU9aBzCH1IPaGL5ZVgEiaeXNCDyxBqogpKjv*ecwoEVvvyzOBaDIk42.*.GAAwoSWRSYydfiixvVX0!/b&bo=oQPYAQAAAAADB1k!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>12.SELECT prod_price,vend_id FROM products WHERE prod_price BETWEEN 35 AND 55<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1RRtTsDv3uEvAwQKaUoYBJdub.5o2gG0mulxy0H38D0AQmm88bh*BtTk*s28qyYIne3rATSzUexbu*0zLi*1ROM!/b&bo=qgOIAQAAAAADBwI!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>13.SELECT vend_state,vend_zip FROM vendors WHERE vend_state IS NULL<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1TdLKE9UdvcyV.ycNNcdTlxPkl4rif.TfLK4V23lmsB0X28merz7PyMSBHB64S2KtNk6RJ5.lggV*yiDkwaTGkA!/b&bo=iQN5AQAAAAADB9A!&rf=viewer_4" alt></p>
+</blockquote>
+<blockquote>
+<p>14.SELECT prod_price,vend_id FROM products WHERE vend_id=1001 AND prod_price&lt;=35<br><img src="http://m.qpic.cn/psc?/V14DGvXv12OGp1/jASqEt644m*KNERKGtvN1dyGOGGWrAf0JsYg1Xj*8lKrXxYQd3vRGPX4eTHNCZvNHLKFquCac9Drp7MAHUHCXz1rm.Vb9L.TxTorFUxhZMo!/b&bo=KwNMAQAAAAADB0c!&rf=viewer_4" alt></p>
+</blockquote>
+<h2 id="后面的不截图了-看看算了-截图效率太低了"><a href="#后面的不截图了-看看算了-截图效率太低了" class="headerlink" title="后面的不截图了  看看算了 截图效率太低了"></a>后面的不截图了  看看算了 截图效率太低了</h2>
       
     </div>
     
@@ -749,6 +781,8 @@
           
             <a href="/tags/linux/" rel="tag"># linux</a>
           
+            <a href="/tags/sql/" rel="tag"># sql</a>
+          
         </div>
       
 
@@ -760,8 +794,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/15/0115-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" rel="next" title="0115-05-邓彪（日报）">
-                <i class="fa fa-chevron-left"></i> 0115-05-邓彪（日报）
+              <a href="/2020/01/16/0116-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" rel="next" title="0116-05-邓彪（日报）">
+                <i class="fa fa-chevron-left"></i> 0116-05-邓彪（日报）
               </a>
             
           </div>
@@ -769,10 +803,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/16/0116-05-%E9%82%93%E5%BD%AA%EF%BC%88%E6%97%A5%E6%8A%A5%EF%BC%89/" rel="prev" title="0116-05-邓彪（日报）">
-                0116-05-邓彪（日报） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -904,7 +934,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bandit-wargame"><span class="nav-number">1.</span> <span class="nav-text">Bandit wargame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux常用命令"><span class="nav-number">2.</span> <span class="nav-text">Linux常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bandit-wargame"><span class="nav-number">1.</span> <span class="nav-text">Bandit wargame</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux常用命令"><span class="nav-number">2.</span> <span class="nav-text">Linux常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后面的不截图了-看看算了-截图效率太低了"><span class="nav-number">3.</span> <span class="nav-text">后面的不截图了  看看算了 截图效率太低了</span></a></li></ol></div>
             
 
           </div>
