@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="更新日期：2020&#x2F;01&#x2F;14  ##TCP三次握手– 客户端发送连接请求——&gt;(SYN&#x3D;J)服务器端– 服务器端——&gt;(SYN&#x3D;K ACK&#x3D;J+1)客户端– 客户端——&gt;(ACK&#x3D;K+1) TCP&#x2F;IP模型– 应用层：pop3(邮局协议版本 110)           SMTP(简单邮件传输协议 25)           Telent(远程控制 23)">
+<meta name="description" content="更新日期：2020&#x2F;01&#x2F;14  TCP三次握手 客户端发送连接请求——&gt;(SYN&#x3D;J)服务器端 服务器端——&gt;(SYN&#x3D;K ACK&#x3D;J+1)客户端 客户端——&gt;(ACK&#x3D;K+1)  TCP&#x2F;IP模型 应用层：pop3(邮局协议版本 110)    SMTP(简单邮件传输协议 25)     Telent(远程控制 23)     FTP(文件传输协议 21)     Http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00)">
 <meta property="og:url" content="http://yoursite.com/2020/04/16/2020-04-15/index.html">
 <meta property="og:site_name" content="yibai的空间">
-<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;14  ##TCP三次握手– 客户端发送连接请求——&gt;(SYN&#x3D;J)服务器端– 服务器端——&gt;(SYN&#x3D;K ACK&#x3D;J+1)客户端– 客户端——&gt;(ACK&#x3D;K+1) TCP&#x2F;IP模型– 应用层：pop3(邮局协议版本 110)           SMTP(简单邮件传输协议 25)           Telent(远程控制 23)">
+<meta property="og:description" content="更新日期：2020&#x2F;01&#x2F;14  TCP三次握手 客户端发送连接请求——&gt;(SYN&#x3D;J)服务器端 服务器端——&gt;(SYN&#x3D;K ACK&#x3D;J+1)客户端 客户端——&gt;(ACK&#x3D;K+1)  TCP&#x2F;IP模型 应用层：pop3(邮局协议版本 110)    SMTP(简单邮件传输协议 25)     Telent(远程控制 23)     FTP(文件传输协议 21)     Http">
 <meta property="article:published_time" content="2020-04-15T16:07:22.548Z">
-<meta property="article:modified_time" content="2020-04-15T16:07:22.549Z">
+<meta property="article:modified_time" content="2020-04-15T16:10:44.798Z">
 <meta property="article:author" content="yibai">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
@@ -354,8 +354,28 @@
         <blockquote>
 <p>更新日期：2020/01/14</p>
 </blockquote>
-<p>##TCP三次握手<br>– 客户端发送连接请求——&gt;(SYN=J)服务器端<br>– 服务器端——&gt;(SYN=K ACK=J+1)客户端<br>– 客户端——&gt;(ACK=K+1)</p>
-<h2 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h2><p>– 应用层：pop3(邮局协议版本 110)<br>           SMTP(简单邮件传输协议 25)<br>           Telent(远程控制 23)<br>           FTP(文件传输协议 21)<br>           Http(超文本传输协议 80)<br>       IMAP(因特网消息访问 143)<br>       Http-s(Http安全协议 443)<br>       DHCP(动态主机配置协议 67)<br>           TFTP(简单文件传送协议 69)<br>       SNMP(简单网络管理协议 161)<br>– 传输层：TCP,UDP<br>– 网络层：IGMP(因特网组管理协议 2)<br>       ICMP(因特网控制报文协议 1)<br>           RSVP(资源预留协议 46)<br>       OSPF(开放最短路径优先 89)<br>– 数据链路层：PPP点对点协议、ARP(地址解析协议)、RARP(反向地址解析协议)<br>– 物理层：IEEE802.X</p>
+<h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><ul>
+<li>客户端发送连接请求——&gt;(SYN=J)服务器端</li>
+<li>服务器端——&gt;(SYN=K ACK=J+1)客户端</li>
+<li>客户端——&gt;(ACK=K+1)</li>
+</ul>
+<h2 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h2><ul>
+<li>应用层：pop3(邮局协议版本 110)<pre><code>    SMTP(简单邮件传输协议 25)
+    Telent(远程控制 23)
+    FTP(文件传输协议 21)
+    Http(超文本传输协议 80)
+IMAP(因特网消息访问 143)
+Http-s(Http安全协议 443)
+DHCP(动态主机配置协议 67)
+    TFTP(简单文件传送协议 69)
+SNMP(简单网络管理协议 161)</code></pre></li>
+<li>传输层：TCP,UDP</li>
+<li>网络层：IGMP(因特网组管理协议 2)<pre><code>ICMP(因特网控制报文协议 1)
+    RSVP(资源预留协议 46)
+OSPF(开放最短路径优先 89)</code></pre></li>
+<li>数据链路层：PPP点对点协议、ARP(地址解析协议)、RARP(反向地址解析协议)</li>
+<li>物理层：IEEE802.X</li>
+</ul>
 <h2 id="划分子网"><a href="#划分子网" class="headerlink" title="划分子网"></a>划分子网</h2><p>如220.180.0.0/19<br>3位网络号  2的3次方=8  256/8=32  即分成8个网段 每个网段32个子网</p>
 
       
@@ -527,7 +547,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP模型"><span class="nav-number">1.</span> <span class="nav-text">TCP&#x2F;IP模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划分子网"><span class="nav-number">2.</span> <span class="nav-text">划分子网</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP三次握手"><span class="nav-number">1.</span> <span class="nav-text">TCP三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP模型"><span class="nav-number">2.</span> <span class="nav-text">TCP&#x2F;IP模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划分子网"><span class="nav-number">3.</span> <span class="nav-text">划分子网</span></a></li></ol></div>
             
 
           </div>
