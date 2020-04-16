@@ -258,6 +258,338 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/13/%E6%80%BB%E7%BB%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yibai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yibai的空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/13/%E6%80%BB%E7%BB%93/" itemprop="url">第一周总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T09:55:20+08:00">
+                2020-01-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%BB%E7%BB%93/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>更新日期：2020/1/13</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><blockquote>
+<p>1.环境安装<br>2.漏洞复现<br>3.信息收集<br>4.漏扫<br>5.计算机网络基础<br>6.ARP欺骗</p>
+</blockquote>
+<blockquote>
+<p>1.安装工具和环境</p>
+<blockquote>
+<p>Python,JAVA,VM（KALI,WIN XP，WIN7等）<br>pip下载库超时失败</p>
+<blockquote>
+<p>pip –default-timeout=100 install -U +库名</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>VS code,Sunblime,MobaXterm</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>学会用markdown语法写文档</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>2.MS08-067,MS07-010,MS10-046漏洞复现<br>基本思路：</p>
+<blockquote>
+<p>1.查看攻击机和靶机IP地址并检查是否能互相ping通<br>当靶机是物理机的时候，有时候物理机能ping通靶机但是靶机ping不通物理机<br>检查物理机防火墙是否关闭</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.打开Metasploit，搜索漏洞名称，可能会出现辅助模块（Auxiliary）和攻击模块</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3.选择一个攻击模块进行使用</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4.设置攻击载荷，配置地址，端口等信息</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5.开始攻击</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>6.后渗透利用</p>
+<blockquote>
+<p>Meterpreter是Metasploit框架中的一个扩展模块，在攻击成 功以后给我们返回一个控制通道，是metsploit后渗透必不可少的 ，它具有强大的功能，包括socks代理，端口转发，键盘监听等多个功能，meterpreter可以说是内网渗透测试神器<br><a href="https://www.mrwu.red/web/2674.html" target="_blank" rel="noopener">https://www.mrwu.red/web/2674.html</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>3.信息收集</p>
+<blockquote>
+<p>1.域名(Whois查询)<br>查询域名是否已经被注册，以及注册域名的详细信息的数据库（如域名所有人、域名注册商）<br><a href="https://who.is/" target="_blank" rel="noopener">who.is:</a><a href="https://who.is" target="_blank" rel="noopener">https://who.is</a><br><a href="https://whois.aizhan.com/" target="_blank" rel="noopener">爱站:</a><a href="https://whois.aizhan.com" target="_blank" rel="noopener">https://whois.aizhan.com</a><br><a href="https://x.threatbook.cn/" target="_blank" rel="noopener">微步:</a><a href="https://x.threatbook.cn" target="_blank" rel="noopener">https://x.threatbook.cn</a><br><a href="http://whois.chinaz.com/" target="_blank" rel="noopener">站长工具:</a><a href="http://whois.chinaz.com" target="_blank" rel="noopener">http://whois.chinaz.com</a></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.子域名收集</p>
+<blockquote>
+<p>1.Google、baidu等传统搜索引擎<br>后台 inurl:.com/后台 inurl:.cn<br><a href="https://www.exploit-db.com/google-hacking-database" target="_blank" rel="noopener">https://www.exploit-db.com/google-hacking-database</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.网络空间安全搜索引擎</p>
+<blockquote>
+<p><a href="https://www.zoomeye.org/" target="_blank" rel="noopener">zoomeye(钟馗之眼):</a><a href="https://www.zoomeye.org" target="_blank" rel="noopener">https://www.zoomeye.org</a><br><a href="https://www.shodan.io/" target="_blank" rel="noopener">shodan:</a><a href="https://www.shodan.io" target="_blank" rel="noopener">https://www.shodan.io</a><br><a href="https://fofa.so/" target="_blank" rel="noopener">Fofa:</a><a href="https://fofa.so" target="_blank" rel="noopener">https://fofa.so</a></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>3.在线查询接口(打开网站输入主域名即可)</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>4.爆破工具</p>
+<blockquote>
+<p>Layer子域名挖掘机<br>subDomainsBrute(githun下载)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>5.DNS查询</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>6.HTTPS证书</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>相关域名收集</p>
+<blockquote>
+<p>旁站及c段收集<br>旁站指的是同一服务器上的其他网站，很多时候，有些网站可能不是那么容易入侵。那么，可以查看该网站所在的服务器上是否还有其他网站。如果有其他网站的话，可以先拿下其他网站的webshell，然后再提权拿到服务器的权限，最后就自然可以拿下该网站了！</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>C段指的是同一内网段内的其他服务器，每个IP有ABCD四个段，举个例子，192.168.0.1，A段就是192，B段是168，C段是0，D段是1，而C段嗅探的意思就是拿下它同一C段中的其中一台服务器，也就是说是D段1-255中的一台服务器，然后利用工具嗅探拿下该服务器</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>7.真实IP收集判断</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>8.社工</p>
+<blockquote>
+<p>在网站上收集对象的情况：公司服务、产品，地理位置，联系电话，高管成员，支持论坛，电子邮件命名规则，可能用于密码分析的特殊字符或短语<br>收集方式：公共服务器、社交媒体、搜索引擎、whois域名信息查询、个人博客、个人网站、公开报告等。（Maltego可以帮助完成基于网页的被动信息收集和查询工作）</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>9.端口扫描</p>
+<blockquote>
+<p>RouterScan(将IP段范围输入再点击开始即可，也可以自己制定相应的端口，可以去文件下的port.txt文件添加)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Nmap(有图形界面和命令行两种方式)</p>
+<blockquote>
+<p>nmap+ ip地址 （nmap简单扫描）<br>namp -vv+ ip地址 (nmap简单扫描，并对结果返回详细的描述输出)<br>nmap -p(range)+ ip地址  (（range）为要扫描的端口范围，端口大小不能超过65535)<br>nmap -p(指定端口) +ip地址 （nmap 指定端口扫描）<br>nmap -sP +ip地址 (nmap ping 扫描,利用类似windows/linux系统下的ping 方式进行扫描)<br>nmap -sP <network address>  (nmap设置扫描一个网段下的ip,CIDR为设置的子网掩码（/24,/16,/8等）)<br>nmap -O  +ip地址 (nmap操作系统类型的探测)</network></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>10.网络架构</p>
+<blockquote>
+<p>服务器类型(服务器信息包括服务器用的操作系统：Linux还是Windows)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>11.敏感文件</p>
+<blockquote>
+<p>git泄露<br>后台目录</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>分享网站：<br><a href="https://www.freebuf.com/articles/database/195169.html" target="_blank" rel="noopener">https://www.freebuf.com/articles/database/195169.html</a><br><a href="https://blog.csdn.net/qq_36119192/article/details/84027438" target="_blank" rel="noopener">https://blog.csdn.net/qq_36119192/article/details/84027438</a></p>
+</blockquote>
+<blockquote>
+<p>4.漏扫<br>AWVS<br>Nessus<br>OpenVas:</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/ericzhangyuncsdn/article/details/79261356" target="_blank" rel="noopener">https://blog.csdn.net/ericzhangyuncsdn/article/details/79261356</a><br><a href="https://www.cnblogs.com/-wenli/p/9715643.html" target="_blank" rel="noopener">https://www.cnblogs.com/-wenli/p/9715643.html</a><br>靶机：Metasploitable 2<br><a href="http://metasploit.lofter.com/post/d9d60_6a924d" target="_blank" rel="noopener">http://metasploit.lofter.com/post/d9d60_6a924d</a><br>其他漏扫：<a href="http://www.sohu.com/a/330903012_100092465" target="_blank" rel="noopener">http://www.sohu.com/a/330903012_100092465</a></p>
+</blockquote>
+</blockquote>
+<p>5.计算机网络基础</p>
+<p>6.ARP欺骗</p>
+<blockquote>
+<p>欺骗命令不能停止</p>
+</blockquote>
+<h2 id="资料分享"><a href="#资料分享" class="headerlink" title="资料分享"></a>资料分享</h2><blockquote>
+<p>1.<a href="https://www.shentoushi.top/" target="_blank" rel="noopener">https://www.shentoushi.top/</a> 渗透师<br>2.<a href="https://skills.bugbank.cn/" target="_blank" rel="noopener">https://skills.bugbank.cn/</a>  安全基础资料<br>3.<a href="http://www.nmd5.com/test/index.php" target="_blank" rel="noopener">http://www.nmd5.com/test/index.php</a> 实战渗透经验<br>4.<a href="https://www.bugbank.cn/live/websm" target="_blank" rel="noopener">https://www.bugbank.cn/live/websm</a> 安全基础视频<br>5.<a href="https://github.com/CHYbeta/Web-Security-Learning" target="_blank" rel="noopener">https://github.com/CHYbeta/Web-Security-Learning</a> 渗透测试漏洞实例文章资源<br>6.<a href="https://blog.csdn.net/weixin_44677409/article/details/96346481" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44677409/article/details/96346481</a></p>
+</blockquote>
+<p>   <a href="https://xz.aliyun.com/t/2536" target="_blank" rel="noopener">https://xz.aliyun.com/t/2536</a>  木马生成</p>
+<h2 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h2><blockquote>
+<p>这周总的来说学习了很多东西，虽然有些东西之前学过，但是经过再一次的学习加深了印象,之前的我对写文档很厌烦，对做这种东西的态度很敷衍，但是看其他同学的日报和作业写得这么好，也觉得很不好意思，没有端正学习态度，经过后面几天认真写文档作业分也变高了，就觉得写文档记录每天做过的事情也挺好，当某些东西要淡出记忆的时候就可以查看一下，查漏补缺，俗话说温故而知新，但是我做文档的效率太低了，速度很慢，以后需要加快速度，不然每天熬夜也很难受</p>
+</blockquote>
+<blockquote>
+<p>还有希望能够改善的东西就是自己的耐心不够，遇到一些觉得很麻烦的事情就不愿意去做或者做完之后不想去记录过程</p>
+</blockquote>
+<blockquote>
+<p>时间计划没有完成，Python已经很久没看了，以后要尽量加快效率控制时间多学习一下Python，PHP等脚本语言</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/11/0111-05-%E9%82%93%E5%BD%AA(%E4%BD%9C%E4%B8%9A)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3620,7 +3952,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -3642,7 +3974,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

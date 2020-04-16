@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="计算机网络," />
+  <meta name="keywords" content="cdn," />
 
 
 
@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="更新日期：2020&#x2F;04&#x2F;15  TCP三次握手 客户端发送连接请求——&gt;(SYN&#x3D;1 ACK&#x3D;0 seq&#x3D;x)服务器端 服务器端——&gt;(SYN&#x3D;1 ACK&#x3D;1 seq&#x3D;y ack&#x3D;x+1)客户端 客户端——&gt;(ACK&#x3D;1 seq&#x3D;x+1 ack&#x3D;y+1)服务器端  TCP&#x2F;IP模型 应用层：  pop3(邮局协议版本 110)SMTP(简单邮件传输协议 25)Telent(远">
+<meta name="description" content="更新日期：2020&#x2F;04&#x2F;16  TCP四次挥手 客户端发送释放请求——&gt;(FIN&#x3D;1 seq&#x3D;u)服务器端 服务器端——&gt;(ACK&#x3D;1 seq&#x3D;v ack&#x3D;u+1)客户端 服务器端——&gt;(FIN&#x3D;1 ACK&#x3D;1 seq&#x3D;w ack&#x3D;u+1)客户端 客户端——&gt;(ACK&#x3D;1 seq&#x3D;u+1 ack&#x3D;w+1)服务器端  cdn绕过 1.通过nslookup查询域名缓存地址">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00)">
-<meta property="og:url" content="http://yoursite.com/2020/04/16/2020-04-15/index.html">
+<meta property="og:title" content="04&#x2F;17（cdn绕过）">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/2020-4-16/index.html">
 <meta property="og:site_name" content="yibai的空间">
-<meta property="og:description" content="更新日期：2020&#x2F;04&#x2F;15  TCP三次握手 客户端发送连接请求——&gt;(SYN&#x3D;1 ACK&#x3D;0 seq&#x3D;x)服务器端 服务器端——&gt;(SYN&#x3D;1 ACK&#x3D;1 seq&#x3D;y ack&#x3D;x+1)客户端 客户端——&gt;(ACK&#x3D;1 seq&#x3D;x+1 ack&#x3D;y+1)服务器端  TCP&#x2F;IP模型 应用层：  pop3(邮局协议版本 110)SMTP(简单邮件传输协议 25)Telent(远">
-<meta property="article:published_time" content="2020-04-15T16:07:22.548Z">
-<meta property="article:modified_time" content="2020-04-16T16:10:57.885Z">
+<meta property="og:description" content="更新日期：2020&#x2F;04&#x2F;16  TCP四次挥手 客户端发送释放请求——&gt;(FIN&#x3D;1 seq&#x3D;u)服务器端 服务器端——&gt;(ACK&#x3D;1 seq&#x3D;v ack&#x3D;u+1)客户端 服务器端——&gt;(FIN&#x3D;1 ACK&#x3D;1 seq&#x3D;w ack&#x3D;u+1)客户端 客户端——&gt;(ACK&#x3D;1 seq&#x3D;u+1 ack&#x3D;w+1)服务器端  cdn绕过 1.通过nslookup查询域名缓存地址">
+<meta property="article:published_time" content="2020-04-16T16:20:27.366Z">
+<meta property="article:modified_time" content="2020-04-16T16:20:27.368Z">
 <meta property="article:author" content="yibai">
-<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="cdn">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/16/2020-04-15/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/04/17/2020-4-16/"/>
 
 
 
 
 
-  <title>Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00) | yibai的空间</title>
+  <title>04/17（cdn绕过） | yibai的空间</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/16/2020-04-15/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/17/2020-4-16/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yibai">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00)</h1>
+          <h1 class="post-title" itemprop="name headline">04/17（cdn绕过）</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T00:07:22+08:00">
-                2020-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-17T00:20:27+08:00">
+                2020-04-17
               </time>
             
 
@@ -352,35 +352,24 @@
 
       
         <blockquote>
-<p>更新日期：2020/04/15</p>
+<p>更新日期：2020/04/16</p>
 </blockquote>
-<h2 id="TCP三次握手"><a href="#TCP三次握手" class="headerlink" title="TCP三次握手"></a>TCP三次握手</h2><ul>
-<li>客户端发送连接请求——&gt;(SYN=1 ACK=0 seq=x)服务器端</li>
-<li>服务器端——&gt;(SYN=1 ACK=1 seq=y ack=x+1)客户端</li>
-<li>客户端——&gt;(ACK=1 seq=x+1 ack=y+1)服务器端</li>
+<h2 id="TCP四次挥手"><a href="#TCP四次挥手" class="headerlink" title="TCP四次挥手"></a>TCP四次挥手</h2><ul>
+<li>客户端发送释放请求——&gt;(FIN=1 seq=u)服务器端</li>
+<li>服务器端——&gt;(ACK=1 seq=v ack=u+1)客户端</li>
+<li>服务器端——&gt;(FIN=1 ACK=1 seq=w ack=u+1)客户端</li>
+<li>客户端——&gt;(ACK=1 seq=u+1 ack=w+1)服务器端</li>
 </ul>
-<h2 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h2><blockquote>
-<p>应用层：</p>
-<blockquote>
-<p>pop3(邮局协议版本 110)<br>SMTP(简单邮件传输协议 25)<br>Telent(远程控制 23)<br>FTP(文件传输协议 21)<br>Http(超文本传输协议 80)<br>IMAP(因特网消息访问 143)<br>Http-s(Http安全协议 443)<br>DHCP(动态主机配置协议 67)<br>TFTP(简单文件传送协议 69)<br>SNMP(简单网络管理协议 161)</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>传输层：TCP,UDP</p>
-</blockquote>
-<blockquote>
-<p>网络层：</p>
-<blockquote>
-<p>IGMP(因特网组管理协议 2)<br>ICMP(因特网控制报文协议 1)<br>RSVP(资源预留协议 46)<br>OSPF(开放最短路径优先 89)</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>数据链路层：PPP点对点协议、ARP(地址解析协议)、RARP(反向地址解析协议)</p>
-</blockquote>
-<blockquote>
-<p>物理层：IEEE802.X</p>
-</blockquote>
-<h2 id="划分子网"><a href="#划分子网" class="headerlink" title="划分子网"></a>划分子网</h2><p>如220.180.0.0/19<br>3位网络号  2的3次方=8  256/8=32  即分成8个网段 每个网段32个子网</p>
+<h2 id="cdn绕过"><a href="#cdn绕过" class="headerlink" title="cdn绕过"></a>cdn绕过</h2><ul>
+<li>1.通过nslookup查询域名缓存地址</li>
+<li>2.通过dns网站查询历史IP</li>
+<li>3.通过多地ping查看地址是否唯一，不唯一可能使用了cdn</li>
+<li>4.通过子域名等未设cdn的域名查询IP段</li>
+<li>5.从国外访问</li>
+<li>6.通过邮件地址判断</li>
+<li>7.通过IP反查域名判断</li>
+<li>8.通过fofa搜索IP地址看是否存在对应公司资产</li>
+</ul>
 
       
     </div>
@@ -398,7 +387,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
+            <a href="/tags/cdn/" rel="tag"># cdn</a>
           
         </div>
       
@@ -411,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/16/0116-05-%E9%82%93%E5%BD%AA%EF%BC%88%E4%BD%9C%E4%B8%9A%EF%BC%89/" rel="next" title="0116-05-邓彪（作业）">
-                <i class="fa fa-chevron-left"></i> 0116-05-邓彪（作业）
+              <a href="/2020/04/16/2020-04-15/" rel="next" title="Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00)">
+                <i class="fa fa-chevron-left"></i> Wed Apr 15 2020 00:00:00 GMT+0800 (GMT+08:00)
               </a>
             
           </div>
@@ -420,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/17/2020-4-16/" rel="prev" title="04/17（cdn绕过）">
-                04/17（cdn绕过） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,7 +540,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP三次握手"><span class="nav-number">1.</span> <span class="nav-text">TCP三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-IP模型"><span class="nav-number">2.</span> <span class="nav-text">TCP&#x2F;IP模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#划分子网"><span class="nav-number">3.</span> <span class="nav-text">划分子网</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP四次挥手"><span class="nav-number">1.</span> <span class="nav-text">TCP四次挥手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cdn绕过"><span class="nav-number">2.</span> <span class="nav-text">cdn绕过</span></a></li></ol></div>
             
 
           </div>
